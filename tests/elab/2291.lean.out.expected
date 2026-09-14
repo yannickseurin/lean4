@@ -93,7 +93,7 @@
       let _x.5 := "nil";
       let _x.6 := Lean.Name.mkStr2 _x.4 _x.5;
       let _x.7 := Lean.Level.zero._impl;
-      let _x.8 := unsafeCast._redArg _x.7;
+      let _x.8 := unsafeCast ◾ ◾ _x.7;
       let _x.9 := List.cons ◾ _x.8 _x.3;
       let _x.10 := Lean.Expr.const._override _x.6 _x.9;
       let nil := Lean.Expr.app._override _x.10 type;
@@ -127,7 +127,7 @@
       let _x.5 := "nil";
       let _x.6 := Lean.Name.mkStr2 _x.4 _x.5;
       let _x.7 := Lean.Level.zero._impl;
-      let _x.8 := unsafeCast._redArg _x.7;
+      let _x.8 := unsafeCast ◾ ◾ _x.7;
       let _x.9 := List.cons ◾ _x.8 _x.3;
       let _x.10 := Lean.Expr.const._override _x.6 _x.9;
       let nil := Lean.Expr.app._override _x.10 type;
@@ -171,7 +171,7 @@
       let _x.5 := "nil";
       let _x.6 := Lean.Name.mkStr2 _x.4 _x.5;
       let _x.7 := Lean.Level.zero._impl;
-      let _x.8 := unsafeCast._redArg _x.7;
+      let _x.8 := unsafeCast ◾ ◾ _x.7;
       let _x.9 := List.cons ◾ _x.8 _x.3;
       let _x.10 := Lean.Expr.const._override _x.6 _x.9;
       let nil := Lean.Expr.app._override _x.10 type;

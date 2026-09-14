@@ -123,6 +123,12 @@ partial def lowerLet (decl : LetDecl .pure) (k : Code .pure) : ToImpureM (Code .
         addSubst decl.fvarId .erased
         k.toImpure
   | .const name _ args =>
+    -- `unsafeCast` has a real definition, so this must come before the signature lookups below:
+    -- they would otherwise lower it to an ordinary call. Any representation mismatch introduced
+    -- by dropping the cast is repaired later by `explicitBoxing`.
+    if name == ``unsafeCast && args.size == 3 then
+      LCNF.addSubst decl.fvarId args[2]!
+      return ← k.toImpure
     let irArgs ← args.mapM (·.toImpure)
     if let some sig ← getImpureSignature? name then
       return (← mkApplication name sig.params.size irArgs)
@@ -176,12 +182,7 @@ partial def lowerLet (decl : LetDecl .pure) (k : Code .pure) : ToImpureM (Code .
         let decl := ⟨decl.fvarId, decl.binderName, ctorInfo.type, .ctor ctorInfo objArgs⟩
         modifyLCtx fun lctx => lctx.addLetDecl decl
         return .let decl (← lowerNonObjectFields)
-    | some (.defnInfo ..) | some (.opaqueInfo ..) =>
-      if name == ``unsafeCast then
-        LCNF.addSubst decl.fvarId args[2]!
-        k.toImpure
-      else
-        mkFap name irArgs
+    | some (.defnInfo ..) | some (.opaqueInfo ..) => mkFap name irArgs
     | some (.axiomInfo ..) | .some (.quotInfo ..) | .some (.inductInfo ..) | .some (.thmInfo ..) =>
       -- Should have been caught by `ToLCNF`
       throwError f!"ToImpure: unexpected use of noncomputable declaration `{name}`; please report this issue"
