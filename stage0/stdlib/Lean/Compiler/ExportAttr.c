@@ -40,6 +40,7 @@ lean_object* l_Lean_addBuiltinDocString(lean_object*, lean_object*);
 uint8_t l_Lean_Environment_contains(lean_object*, lean_object*, uint8_t);
 lean_object* l_Lean_Name_mkStr1(lean_object*);
 lean_object* l_Lean_registerParametricAttribute___redArg(lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 lean_object* l_Lean_ParametricAttribute_getParam_x3f___redArg(lean_object*, lean_object*, lean_object*, lean_object*);
 uint8_t lean_name_eq(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_panic___at___00__private_Lean_Compiler_ExportAttr_0__Lean_isValidCppId_spec__1(lean_object*);
@@ -951,7 +952,7 @@ LEAN_EXPORT lean_object* lean_get_export_name_for(lean_object* v_env_311_, lean_
 _start:
 {
 lean_object* v___x_313_; lean_object* v___x_314_; lean_object* v___x_315_; 
-v___x_313_ = lean_box(0);
+v___x_313_ = l_Lean_instInhabitedName;
 v___x_314_ = l_Lean_exportAttr;
 v___x_315_ = l_Lean_ParametricAttribute_getParam_x3f___redArg(v___x_313_, v___x_314_, v_env_311_, v_n_312_);
 return v___x_315_;

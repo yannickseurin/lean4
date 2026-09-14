@@ -18,6 +18,7 @@ lean_object* lean_st_ref_get(lean_object*);
 lean_object* l_Lean_stringToMessageData(lean_object*);
 uint8_t l_Lean_getReducibilityStatusCore(lean_object*, lean_object*);
 lean_object* l_Lean_Name_mkStr2(lean_object*, lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 lean_object* l_Lean_Environment_setExporting(lean_object*, uint8_t);
 uint8_t l_Lean_Environment_contains(lean_object*, lean_object*, uint8_t);
@@ -1750,7 +1751,7 @@ LEAN_EXPORT lean_object* l_Lean_mkUnknownIdentifierMessageCore___at___00Lean_mkU
 _start:
 {
 lean_object* v___x_515_; lean_object* v___x_516_; lean_object* v_env_517_; uint8_t v___x_518_; 
-v___x_515_ = lean_box(0);
+v___x_515_ = l_Lean_instInhabitedName;
 v___x_516_ = lean_st_ref_get(v___y_513_);
 v_env_517_ = lean_ctor_get(v___x_516_, 0);
 lean_inc_ref(v_env_517_);
@@ -1850,6 +1851,7 @@ lean_object* v___x_542_; lean_object* v___x_543_; lean_object* v_mod_544_; uint8
 v___x_542_ = l_Lean_Environment_header(v_env_517_);
 lean_dec_ref(v_env_517_);
 v___x_543_ = l_Lean_EnvironmentHeader_moduleNames(v___x_542_);
+lean_dec_ref(v___x_542_);
 v_mod_544_ = lean_array_get(v___x_515_, v___x_543_, v_val_538_);
 lean_dec(v_val_538_);
 lean_dec_ref(v___x_543_);

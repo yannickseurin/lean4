@@ -2664,7 +2664,6 @@ v___x_760_ = lean_mk_empty_array_with_capacity(v___x_759_);
 v___x_761_ = lean_array_push(v___x_760_, v_h_726_);
 v___x_762_ = 1;
 v___x_763_ = l_Lean_Meta_mkLambdaFVars(v___x_761_, v_a_758_, v___x_725_, v___x_724_, v___x_725_, v___x_724_, v___x_762_, v___y_730_, v___y_731_, v___y_732_, v___y_733_);
-lean_dec_ref(v___x_761_);
 if (lean_obj_tag(v___x_763_) == 0)
 {
 lean_object* v_a_764_; lean_object* v___x_765_; uint8_t v_transparency_766_; uint8_t v___x_767_; uint8_t v___x_768_; 

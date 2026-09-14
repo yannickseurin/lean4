@@ -25,6 +25,7 @@ size_t lean_usize_add(size_t, size_t);
 uint64_t l_Lean_Compiler_LCNF_instHashableLetValue_hash(uint8_t, lean_object*);
 uint64_t l_Lean_Compiler_LCNF_instHashableArg_hash___redArg(lean_object*);
 uint8_t lean_nat_dec_le(lean_object*, lean_object*);
+lean_object* l_unsafeCast___redArg(lean_object*);
 uint64_t l_Lean_Compiler_LCNF_instHashableCtorInfo_hash(lean_object*);
 uint64_t lean_uint64_of_nat(lean_object*);
 uint64_t l_Lean_instHashableExternAttrData_hash(lean_object*);
@@ -637,22 +638,24 @@ switch(lean_obj_tag(v_alt_262_))
 {
 case 0:
 {
-lean_object* v_ctorName_263_; lean_object* v_params_264_; lean_object* v_code_265_; uint64_t v___y_267_; uint64_t v___y_268_; uint64_t v___y_273_; 
+lean_object* v_ctorName_263_; lean_object* v_params_264_; lean_object* v_code_265_; uint64_t v___y_267_; uint64_t v___y_268_; uint64_t v___y_273_; lean_object* v___x_281_; 
 v_ctorName_263_ = lean_ctor_get(v_alt_262_, 0);
 v_params_264_ = lean_ctor_get(v_alt_262_, 1);
 v_code_265_ = lean_ctor_get(v_alt_262_, 2);
-if (lean_obj_tag(v_ctorName_263_) == 0)
+v___x_281_ = l_unsafeCast___redArg(v_ctorName_263_);
+if (lean_obj_tag(v___x_281_) == 0)
 {
-uint64_t v___x_281_; 
-v___x_281_ = 1723ULL;
-v___y_273_ = v___x_281_;
+uint64_t v___x_282_; 
+v___x_282_ = 1723ULL;
+v___y_273_ = v___x_282_;
 goto v___jp_272_;
 }
 else
 {
-uint64_t v_hash_282_; 
-v_hash_282_ = lean_ctor_get_uint64(v_ctorName_263_, sizeof(void*)*2);
-v___y_273_ = v_hash_282_;
+uint64_t v_hash_283_; 
+v_hash_283_ = lean_ctor_get_uint64(v___x_281_, sizeof(void*)*2);
+lean_dec(v___x_281_);
+v___y_273_ = v_hash_283_;
 goto v___jp_272_;
 }
 v___jp_266_:
@@ -690,464 +693,468 @@ goto v___jp_266_;
 }
 case 1:
 {
-lean_object* v_info_283_; lean_object* v_code_284_; uint64_t v___x_285_; uint64_t v___x_286_; uint64_t v___x_287_; 
-v_info_283_ = lean_ctor_get(v_alt_262_, 0);
-v_code_284_ = lean_ctor_get(v_alt_262_, 1);
-v___x_285_ = l_Lean_Compiler_LCNF_instHashableCtorInfo_hash(v_info_283_);
-v___x_286_ = l_Lean_Compiler_LCNF_hashCode(v_pu_261_, v_code_284_);
-v___x_287_ = lean_uint64_mix_hash(v___x_285_, v___x_286_);
-return v___x_287_;
+lean_object* v_info_284_; lean_object* v_code_285_; uint64_t v___x_286_; uint64_t v___x_287_; uint64_t v___x_288_; 
+v_info_284_ = lean_ctor_get(v_alt_262_, 0);
+v_code_285_ = lean_ctor_get(v_alt_262_, 1);
+v___x_286_ = l_Lean_Compiler_LCNF_instHashableCtorInfo_hash(v_info_284_);
+v___x_287_ = l_Lean_Compiler_LCNF_hashCode(v_pu_261_, v_code_285_);
+v___x_288_ = lean_uint64_mix_hash(v___x_286_, v___x_287_);
+return v___x_288_;
 }
 default: 
 {
-lean_object* v_code_288_; uint64_t v___x_289_; 
-v_code_288_ = lean_ctor_get(v_alt_262_, 0);
-v___x_289_ = l_Lean_Compiler_LCNF_hashCode(v_pu_261_, v_code_288_);
-return v___x_289_;
+lean_object* v_code_289_; uint64_t v___x_290_; 
+v_code_289_ = lean_ctor_get(v_alt_262_, 0);
+v___x_290_ = l_Lean_Compiler_LCNF_hashCode(v_pu_261_, v_code_289_);
+return v___x_290_;
 }
 }
 }
 }
-LEAN_EXPORT uint64_t l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashAlts_spec__3(uint8_t v_pu_290_, lean_object* v_as_291_, size_t v_i_292_, size_t v_stop_293_, uint64_t v_b_294_){
+LEAN_EXPORT uint64_t l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashAlts_spec__3(uint8_t v_pu_291_, lean_object* v_as_292_, size_t v_i_293_, size_t v_stop_294_, uint64_t v_b_295_){
 _start:
 {
-uint8_t v___x_295_; 
-v___x_295_ = lean_usize_dec_eq(v_i_292_, v_stop_293_);
-if (v___x_295_ == 0)
+uint8_t v___x_296_; 
+v___x_296_ = lean_usize_dec_eq(v_i_293_, v_stop_294_);
+if (v___x_296_ == 0)
 {
-lean_object* v___x_296_; uint64_t v___x_297_; uint64_t v___x_298_; size_t v___x_299_; size_t v___x_300_; 
-v___x_296_ = lean_array_uget_borrowed(v_as_291_, v_i_292_);
-v___x_297_ = l_Lean_Compiler_LCNF_hashAlt(v_pu_290_, v___x_296_);
-v___x_298_ = lean_uint64_mix_hash(v_b_294_, v___x_297_);
-v___x_299_ = ((size_t)1ULL);
-v___x_300_ = lean_usize_add(v_i_292_, v___x_299_);
-v_i_292_ = v___x_300_;
-v_b_294_ = v___x_298_;
+lean_object* v___x_297_; uint64_t v___x_298_; uint64_t v___x_299_; size_t v___x_300_; size_t v___x_301_; 
+v___x_297_ = lean_array_uget_borrowed(v_as_292_, v_i_293_);
+v___x_298_ = l_Lean_Compiler_LCNF_hashAlt(v_pu_291_, v___x_297_);
+v___x_299_ = lean_uint64_mix_hash(v_b_295_, v___x_298_);
+v___x_300_ = ((size_t)1ULL);
+v___x_301_ = lean_usize_add(v_i_293_, v___x_300_);
+v_i_293_ = v___x_301_;
+v_b_295_ = v___x_299_;
 goto _start;
 }
 else
 {
-return v_b_294_;
+return v_b_295_;
 }
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashAlts_spec__3___boxed(lean_object* v_pu_302_, lean_object* v_as_303_, lean_object* v_i_304_, lean_object* v_stop_305_, lean_object* v_b_306_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashAlts_spec__3___boxed(lean_object* v_pu_303_, lean_object* v_as_304_, lean_object* v_i_305_, lean_object* v_stop_306_, lean_object* v_b_307_){
 _start:
 {
-uint8_t v_pu_boxed_307_; size_t v_i_boxed_308_; size_t v_stop_boxed_309_; uint64_t v_b_boxed_310_; uint64_t v_res_311_; lean_object* v_r_312_; 
-v_pu_boxed_307_ = lean_unbox(v_pu_302_);
-v_i_boxed_308_ = lean_unbox_usize(v_i_304_);
-lean_dec(v_i_304_);
-v_stop_boxed_309_ = lean_unbox_usize(v_stop_305_);
-lean_dec(v_stop_305_);
-v_b_boxed_310_ = lean_unbox_uint64(v_b_306_);
-lean_dec_ref(v_b_306_);
-v_res_311_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashAlts_spec__3(v_pu_boxed_307_, v_as_303_, v_i_boxed_308_, v_stop_boxed_309_, v_b_boxed_310_);
-lean_dec_ref(v_as_303_);
-v_r_312_ = lean_box_uint64(v_res_311_);
-return v_r_312_;
+uint8_t v_pu_boxed_308_; size_t v_i_boxed_309_; size_t v_stop_boxed_310_; uint64_t v_b_boxed_311_; uint64_t v_res_312_; lean_object* v_r_313_; 
+v_pu_boxed_308_ = lean_unbox(v_pu_303_);
+v_i_boxed_309_ = lean_unbox_usize(v_i_305_);
+lean_dec(v_i_305_);
+v_stop_boxed_310_ = lean_unbox_usize(v_stop_306_);
+lean_dec(v_stop_306_);
+v_b_boxed_311_ = lean_unbox_uint64(v_b_307_);
+lean_dec_ref(v_b_307_);
+v_res_312_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashAlts_spec__3(v_pu_boxed_308_, v_as_304_, v_i_boxed_309_, v_stop_boxed_310_, v_b_boxed_311_);
+lean_dec_ref(v_as_304_);
+v_r_313_ = lean_box_uint64(v_res_312_);
+return v_r_313_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_hashAlts___boxed(lean_object* v_pu_313_, lean_object* v_alts_314_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_hashAlts___boxed(lean_object* v_pu_314_, lean_object* v_alts_315_){
 _start:
 {
-uint8_t v_pu_boxed_315_; uint64_t v_res_316_; lean_object* v_r_317_; 
-v_pu_boxed_315_ = lean_unbox(v_pu_313_);
-v_res_316_ = l_Lean_Compiler_LCNF_hashAlts(v_pu_boxed_315_, v_alts_314_);
-lean_dec_ref(v_alts_314_);
-v_r_317_ = lean_box_uint64(v_res_316_);
-return v_r_317_;
+uint8_t v_pu_boxed_316_; uint64_t v_res_317_; lean_object* v_r_318_; 
+v_pu_boxed_316_ = lean_unbox(v_pu_314_);
+v_res_317_ = l_Lean_Compiler_LCNF_hashAlts(v_pu_boxed_316_, v_alts_315_);
+lean_dec_ref(v_alts_315_);
+v_r_318_ = lean_box_uint64(v_res_317_);
+return v_r_318_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_hashAlt___boxed(lean_object* v_pu_318_, lean_object* v_alt_319_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_hashAlt___boxed(lean_object* v_pu_319_, lean_object* v_alt_320_){
 _start:
 {
-uint8_t v_pu_boxed_320_; uint64_t v_res_321_; lean_object* v_r_322_; 
-v_pu_boxed_320_ = lean_unbox(v_pu_318_);
-v_res_321_ = l_Lean_Compiler_LCNF_hashAlt(v_pu_boxed_320_, v_alt_319_);
-lean_dec_ref(v_alt_319_);
-v_r_322_ = lean_box_uint64(v_res_321_);
-return v_r_322_;
+uint8_t v_pu_boxed_321_; uint64_t v_res_322_; lean_object* v_r_323_; 
+v_pu_boxed_321_ = lean_unbox(v_pu_319_);
+v_res_322_ = l_Lean_Compiler_LCNF_hashAlt(v_pu_boxed_321_, v_alt_320_);
+lean_dec_ref(v_alt_320_);
+v_r_323_ = lean_box_uint64(v_res_322_);
+return v_r_323_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_hashCode___boxed(lean_object* v_pu_323_, lean_object* v_code_324_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_hashCode___boxed(lean_object* v_pu_324_, lean_object* v_code_325_){
 _start:
 {
-uint8_t v_pu_boxed_325_; uint64_t v_res_326_; lean_object* v_r_327_; 
-v_pu_boxed_325_ = lean_unbox(v_pu_323_);
-v_res_326_ = l_Lean_Compiler_LCNF_hashCode(v_pu_boxed_325_, v_code_324_);
-lean_dec_ref(v_code_324_);
-v_r_327_ = lean_box_uint64(v_res_326_);
-return v_r_327_;
+uint8_t v_pu_boxed_326_; uint64_t v_res_327_; lean_object* v_r_328_; 
+v_pu_boxed_326_ = lean_unbox(v_pu_324_);
+v_res_327_ = l_Lean_Compiler_LCNF_hashCode(v_pu_boxed_326_, v_code_325_);
+lean_dec_ref(v_code_325_);
+v_r_328_ = lean_box_uint64(v_res_327_);
+return v_r_328_;
 }
 }
-LEAN_EXPORT uint64_t l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1(uint8_t v_pu_328_, lean_object* v_as_329_, size_t v_i_330_, size_t v_stop_331_, uint64_t v_b_332_){
+LEAN_EXPORT uint64_t l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1(uint8_t v_pu_329_, lean_object* v_as_330_, size_t v_i_331_, size_t v_stop_332_, uint64_t v_b_333_){
 _start:
 {
-uint64_t v___x_333_; 
-v___x_333_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1___redArg(v_as_329_, v_i_330_, v_stop_331_, v_b_332_);
-return v___x_333_;
+uint64_t v___x_334_; 
+v___x_334_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1___redArg(v_as_330_, v_i_331_, v_stop_332_, v_b_333_);
+return v___x_334_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1___boxed(lean_object* v_pu_334_, lean_object* v_as_335_, lean_object* v_i_336_, lean_object* v_stop_337_, lean_object* v_b_338_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1___boxed(lean_object* v_pu_335_, lean_object* v_as_336_, lean_object* v_i_337_, lean_object* v_stop_338_, lean_object* v_b_339_){
 _start:
 {
-uint8_t v_pu_boxed_339_; size_t v_i_boxed_340_; size_t v_stop_boxed_341_; uint64_t v_b_boxed_342_; uint64_t v_res_343_; lean_object* v_r_344_; 
-v_pu_boxed_339_ = lean_unbox(v_pu_334_);
-v_i_boxed_340_ = lean_unbox_usize(v_i_336_);
-lean_dec(v_i_336_);
-v_stop_boxed_341_ = lean_unbox_usize(v_stop_337_);
-lean_dec(v_stop_337_);
-v_b_boxed_342_ = lean_unbox_uint64(v_b_338_);
-lean_dec_ref(v_b_338_);
-v_res_343_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1(v_pu_boxed_339_, v_as_335_, v_i_boxed_340_, v_stop_boxed_341_, v_b_boxed_342_);
-lean_dec_ref(v_as_335_);
-v_r_344_ = lean_box_uint64(v_res_343_);
-return v_r_344_;
+uint8_t v_pu_boxed_340_; size_t v_i_boxed_341_; size_t v_stop_boxed_342_; uint64_t v_b_boxed_343_; uint64_t v_res_344_; lean_object* v_r_345_; 
+v_pu_boxed_340_ = lean_unbox(v_pu_335_);
+v_i_boxed_341_ = lean_unbox_usize(v_i_337_);
+lean_dec(v_i_337_);
+v_stop_boxed_342_ = lean_unbox_usize(v_stop_338_);
+lean_dec(v_stop_338_);
+v_b_boxed_343_ = lean_unbox_uint64(v_b_339_);
+lean_dec_ref(v_b_339_);
+v_res_344_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashCode_spec__1(v_pu_boxed_340_, v_as_336_, v_i_boxed_341_, v_stop_boxed_342_, v_b_boxed_343_);
+lean_dec_ref(v_as_336_);
+v_r_345_ = lean_box_uint64(v_res_344_);
+return v_r_345_;
 }
 }
-LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableCode___lam__0(uint8_t v_pu_345_, lean_object* v_c_346_){
+LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableCode___lam__0(uint8_t v_pu_346_, lean_object* v_c_347_){
 _start:
 {
-uint64_t v___x_347_; 
-v___x_347_ = l_Lean_Compiler_LCNF_hashCode(v_pu_345_, v_c_346_);
-return v___x_347_;
+uint64_t v___x_348_; 
+v___x_348_ = l_Lean_Compiler_LCNF_hashCode(v_pu_346_, v_c_347_);
+return v___x_348_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableCode___lam__0___boxed(lean_object* v_pu_348_, lean_object* v_c_349_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableCode___lam__0___boxed(lean_object* v_pu_349_, lean_object* v_c_350_){
 _start:
 {
-uint8_t v_pu_boxed_350_; uint64_t v_res_351_; lean_object* v_r_352_; 
-v_pu_boxed_350_ = lean_unbox(v_pu_348_);
-v_res_351_ = l_Lean_Compiler_LCNF_instHashableCode___lam__0(v_pu_boxed_350_, v_c_349_);
-lean_dec_ref(v_c_349_);
-v_r_352_ = lean_box_uint64(v_res_351_);
-return v_r_352_;
+uint8_t v_pu_boxed_351_; uint64_t v_res_352_; lean_object* v_r_353_; 
+v_pu_boxed_351_ = lean_unbox(v_pu_349_);
+v_res_352_ = l_Lean_Compiler_LCNF_instHashableCode___lam__0(v_pu_boxed_351_, v_c_350_);
+lean_dec_ref(v_c_350_);
+v_r_353_ = lean_box_uint64(v_res_352_);
+return v_r_353_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableCode(uint8_t v_pu_353_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableCode(uint8_t v_pu_354_){
 _start:
 {
-lean_object* v___x_354_; lean_object* v___f_355_; 
-v___x_354_ = lean_box(v_pu_353_);
-v___f_355_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableCode___lam__0___boxed), 2, 1);
-lean_closure_set(v___f_355_, 0, v___x_354_);
-return v___f_355_;
+lean_object* v___x_355_; lean_object* v___f_356_; 
+v___x_355_ = lean_box(v_pu_354_);
+v___f_356_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableCode___lam__0___boxed), 2, 1);
+lean_closure_set(v___f_356_, 0, v___x_355_);
+return v___f_356_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableCode___boxed(lean_object* v_pu_356_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableCode___boxed(lean_object* v_pu_357_){
 _start:
 {
-uint8_t v_pu_boxed_357_; lean_object* v_res_358_; 
-v_pu_boxed_357_ = lean_unbox(v_pu_356_);
-v_res_358_ = l_Lean_Compiler_LCNF_instHashableCode(v_pu_boxed_357_);
-return v_res_358_;
+uint8_t v_pu_boxed_358_; lean_object* v_res_359_; 
+v_pu_boxed_358_ = lean_unbox(v_pu_357_);
+v_res_359_ = l_Lean_Compiler_LCNF_instHashableCode(v_pu_boxed_358_);
+return v_res_359_;
 }
 }
-LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableDeclValue_hash(uint8_t v_pu_359_, lean_object* v_x_360_){
+LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableDeclValue_hash(uint8_t v_pu_360_, lean_object* v_x_361_){
 _start:
 {
-if (lean_obj_tag(v_x_360_) == 0)
+if (lean_obj_tag(v_x_361_) == 0)
 {
-lean_object* v_code_361_; uint64_t v___x_362_; uint64_t v___x_363_; uint64_t v___x_364_; 
-v_code_361_ = lean_ctor_get(v_x_360_, 0);
-v___x_362_ = 0ULL;
-v___x_363_ = l_Lean_Compiler_LCNF_hashCode(v_pu_359_, v_code_361_);
-v___x_364_ = lean_uint64_mix_hash(v___x_362_, v___x_363_);
-return v___x_364_;
+lean_object* v_code_362_; uint64_t v___x_363_; uint64_t v___x_364_; uint64_t v___x_365_; 
+v_code_362_ = lean_ctor_get(v_x_361_, 0);
+v___x_363_ = 0ULL;
+v___x_364_ = l_Lean_Compiler_LCNF_hashCode(v_pu_360_, v_code_362_);
+v___x_365_ = lean_uint64_mix_hash(v___x_363_, v___x_364_);
+return v___x_365_;
 }
 else
 {
-lean_object* v_externAttrData_365_; uint64_t v___x_366_; uint64_t v___x_367_; uint64_t v___x_368_; 
-v_externAttrData_365_ = lean_ctor_get(v_x_360_, 0);
-v___x_366_ = 1ULL;
-v___x_367_ = l_Lean_instHashableExternAttrData_hash(v_externAttrData_365_);
-v___x_368_ = lean_uint64_mix_hash(v___x_366_, v___x_367_);
-return v___x_368_;
+lean_object* v_externAttrData_366_; uint64_t v___x_367_; uint64_t v___x_368_; uint64_t v___x_369_; 
+v_externAttrData_366_ = lean_ctor_get(v_x_361_, 0);
+v___x_367_ = 1ULL;
+v___x_368_ = l_Lean_instHashableExternAttrData_hash(v_externAttrData_366_);
+v___x_369_ = lean_uint64_mix_hash(v___x_367_, v___x_368_);
+return v___x_369_;
 }
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDeclValue_hash___boxed(lean_object* v_pu_369_, lean_object* v_x_370_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDeclValue_hash___boxed(lean_object* v_pu_370_, lean_object* v_x_371_){
 _start:
 {
-uint8_t v_pu_47__boxed_371_; uint64_t v_res_372_; lean_object* v_r_373_; 
-v_pu_47__boxed_371_ = lean_unbox(v_pu_369_);
-v_res_372_ = l_Lean_Compiler_LCNF_instHashableDeclValue_hash(v_pu_47__boxed_371_, v_x_370_);
-lean_dec_ref(v_x_370_);
-v_r_373_ = lean_box_uint64(v_res_372_);
-return v_r_373_;
+uint8_t v_pu_47__boxed_372_; uint64_t v_res_373_; lean_object* v_r_374_; 
+v_pu_47__boxed_372_ = lean_unbox(v_pu_370_);
+v_res_373_ = l_Lean_Compiler_LCNF_instHashableDeclValue_hash(v_pu_47__boxed_372_, v_x_371_);
+lean_dec_ref(v_x_371_);
+v_r_374_ = lean_box_uint64(v_res_373_);
+return v_r_374_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDeclValue(uint8_t v_pu_374_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDeclValue(uint8_t v_pu_375_){
 _start:
 {
-lean_object* v___x_375_; lean_object* v___x_376_; 
-v___x_375_ = lean_box(v_pu_374_);
-v___x_376_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableDeclValue_hash___boxed), 2, 1);
-lean_closure_set(v___x_376_, 0, v___x_375_);
-return v___x_376_;
+lean_object* v___x_376_; lean_object* v___x_377_; 
+v___x_376_ = lean_box(v_pu_375_);
+v___x_377_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableDeclValue_hash___boxed), 2, 1);
+lean_closure_set(v___x_377_, 0, v___x_376_);
+return v___x_377_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDeclValue___boxed(lean_object* v_pu_377_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDeclValue___boxed(lean_object* v_pu_378_){
 _start:
 {
-uint8_t v_pu_5__boxed_378_; lean_object* v_res_379_; 
-v_pu_5__boxed_378_ = lean_unbox(v_pu_377_);
-v_res_379_ = l_Lean_Compiler_LCNF_instHashableDeclValue(v_pu_5__boxed_378_);
-return v_res_379_;
+uint8_t v_pu_5__boxed_379_; lean_object* v_res_380_; 
+v_pu_5__boxed_379_ = lean_unbox(v_pu_378_);
+v_res_380_ = l_Lean_Compiler_LCNF_instHashableDeclValue(v_pu_5__boxed_379_);
+return v_res_380_;
 }
 }
-LEAN_EXPORT uint64_t l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0(uint64_t v_x_380_, lean_object* v_x_381_){
+LEAN_EXPORT uint64_t l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0(uint64_t v_x_381_, lean_object* v_x_382_){
 _start:
 {
-if (lean_obj_tag(v_x_381_) == 0)
+if (lean_obj_tag(v_x_382_) == 0)
 {
-return v_x_380_;
+return v_x_381_;
 }
 else
 {
-lean_object* v_head_382_; lean_object* v_tail_383_; uint64_t v___y_385_; 
-v_head_382_ = lean_ctor_get(v_x_381_, 0);
-v_tail_383_ = lean_ctor_get(v_x_381_, 1);
-if (lean_obj_tag(v_head_382_) == 0)
+lean_object* v_head_383_; lean_object* v_tail_384_; uint64_t v___y_386_; lean_object* v___x_389_; 
+v_head_383_ = lean_ctor_get(v_x_382_, 0);
+v_tail_384_ = lean_ctor_get(v_x_382_, 1);
+v___x_389_ = l_unsafeCast___redArg(v_head_383_);
+if (lean_obj_tag(v___x_389_) == 0)
 {
-uint64_t v___x_388_; 
-v___x_388_ = 1723ULL;
-v___y_385_ = v___x_388_;
-goto v___jp_384_;
+uint64_t v___x_390_; 
+v___x_390_ = 1723ULL;
+v___y_386_ = v___x_390_;
+goto v___jp_385_;
 }
 else
 {
-uint64_t v_hash_389_; 
-v_hash_389_ = lean_ctor_get_uint64(v_head_382_, sizeof(void*)*2);
-v___y_385_ = v_hash_389_;
-goto v___jp_384_;
+uint64_t v_hash_391_; 
+v_hash_391_ = lean_ctor_get_uint64(v___x_389_, sizeof(void*)*2);
+lean_dec(v___x_389_);
+v___y_386_ = v_hash_391_;
+goto v___jp_385_;
 }
-v___jp_384_:
+v___jp_385_:
 {
-uint64_t v___x_386_; 
-v___x_386_ = lean_uint64_mix_hash(v_x_380_, v___y_385_);
-v_x_380_ = v___x_386_;
-v_x_381_ = v_tail_383_;
+uint64_t v___x_387_; 
+v___x_387_ = lean_uint64_mix_hash(v_x_381_, v___y_386_);
+v_x_381_ = v___x_387_;
+v_x_382_ = v_tail_384_;
 goto _start;
 }
 }
 }
 }
-LEAN_EXPORT lean_object* l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0___boxed(lean_object* v_x_390_, lean_object* v_x_391_){
+LEAN_EXPORT lean_object* l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0___boxed(lean_object* v_x_392_, lean_object* v_x_393_){
 _start:
 {
-uint64_t v_x_184__boxed_392_; uint64_t v_res_393_; lean_object* v_r_394_; 
-v_x_184__boxed_392_ = lean_unbox_uint64(v_x_390_);
-lean_dec_ref(v_x_390_);
-v_res_393_ = l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0(v_x_184__boxed_392_, v_x_391_);
-lean_dec(v_x_391_);
-v_r_394_ = lean_box_uint64(v_res_393_);
-return v_r_394_;
+uint64_t v_x_186__boxed_394_; uint64_t v_res_395_; lean_object* v_r_396_; 
+v_x_186__boxed_394_ = lean_unbox_uint64(v_x_392_);
+lean_dec_ref(v_x_392_);
+v_res_395_ = l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0(v_x_186__boxed_394_, v_x_393_);
+lean_dec(v_x_393_);
+v_r_396_ = lean_box_uint64(v_res_395_);
+return v_r_396_;
 }
 }
-LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(lean_object* v_x_395_){
+LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(lean_object* v_x_397_){
 _start:
 {
-lean_object* v_name_396_; lean_object* v_levelParams_397_; lean_object* v_type_398_; lean_object* v_params_399_; uint8_t v_safe_400_; uint64_t v___y_402_; uint64_t v___y_403_; uint64_t v___x_409_; uint64_t v___y_411_; 
-v_name_396_ = lean_ctor_get(v_x_395_, 0);
-v_levelParams_397_ = lean_ctor_get(v_x_395_, 1);
-v_type_398_ = lean_ctor_get(v_x_395_, 2);
-v_params_399_ = lean_ctor_get(v_x_395_, 3);
-v_safe_400_ = lean_ctor_get_uint8(v_x_395_, sizeof(void*)*4);
-v___x_409_ = 0ULL;
-if (lean_obj_tag(v_name_396_) == 0)
+lean_object* v_name_398_; lean_object* v_levelParams_399_; lean_object* v_type_400_; lean_object* v_params_401_; uint8_t v_safe_402_; uint64_t v___y_404_; uint64_t v___y_405_; uint64_t v___x_411_; uint64_t v___y_413_; lean_object* v___x_426_; 
+v_name_398_ = lean_ctor_get(v_x_397_, 0);
+v_levelParams_399_ = lean_ctor_get(v_x_397_, 1);
+v_type_400_ = lean_ctor_get(v_x_397_, 2);
+v_params_401_ = lean_ctor_get(v_x_397_, 3);
+v_safe_402_ = lean_ctor_get_uint8(v_x_397_, sizeof(void*)*4);
+v___x_411_ = 0ULL;
+v___x_426_ = l_unsafeCast___redArg(v_name_398_);
+if (lean_obj_tag(v___x_426_) == 0)
 {
-uint64_t v___x_424_; 
-v___x_424_ = 1723ULL;
-v___y_411_ = v___x_424_;
-goto v___jp_410_;
+uint64_t v___x_427_; 
+v___x_427_ = 1723ULL;
+v___y_413_ = v___x_427_;
+goto v___jp_412_;
 }
 else
 {
-uint64_t v_hash_425_; 
-v_hash_425_ = lean_ctor_get_uint64(v_name_396_, sizeof(void*)*2);
-v___y_411_ = v_hash_425_;
-goto v___jp_410_;
+uint64_t v_hash_428_; 
+v_hash_428_ = lean_ctor_get_uint64(v___x_426_, sizeof(void*)*2);
+lean_dec(v___x_426_);
+v___y_413_ = v_hash_428_;
+goto v___jp_412_;
 }
-v___jp_401_:
+v___jp_403_:
 {
-uint64_t v___x_404_; 
-v___x_404_ = lean_uint64_mix_hash(v___y_402_, v___y_403_);
-if (v_safe_400_ == 0)
-{
-uint64_t v___x_405_; uint64_t v___x_406_; 
-v___x_405_ = 13ULL;
-v___x_406_ = lean_uint64_mix_hash(v___x_404_, v___x_405_);
-return v___x_406_;
-}
-else
+uint64_t v___x_406_; 
+v___x_406_ = lean_uint64_mix_hash(v___y_404_, v___y_405_);
+if (v_safe_402_ == 0)
 {
 uint64_t v___x_407_; uint64_t v___x_408_; 
-v___x_407_ = 11ULL;
-v___x_408_ = lean_uint64_mix_hash(v___x_404_, v___x_407_);
+v___x_407_ = 13ULL;
+v___x_408_ = lean_uint64_mix_hash(v___x_406_, v___x_407_);
 return v___x_408_;
 }
+else
+{
+uint64_t v___x_409_; uint64_t v___x_410_; 
+v___x_409_ = 11ULL;
+v___x_410_ = lean_uint64_mix_hash(v___x_406_, v___x_409_);
+return v___x_410_;
 }
-v___jp_410_:
+}
+v___jp_412_:
 {
-uint64_t v___x_412_; uint64_t v___x_413_; uint64_t v___x_414_; uint64_t v___x_415_; uint64_t v___x_416_; uint64_t v___x_417_; lean_object* v___x_418_; lean_object* v___x_419_; uint8_t v___x_420_; 
-v___x_412_ = lean_uint64_mix_hash(v___x_409_, v___y_411_);
-v___x_413_ = 7ULL;
-v___x_414_ = l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0(v___x_413_, v_levelParams_397_);
-v___x_415_ = lean_uint64_mix_hash(v___x_412_, v___x_414_);
-v___x_416_ = l_Lean_Expr_hash(v_type_398_);
-v___x_417_ = lean_uint64_mix_hash(v___x_415_, v___x_416_);
-v___x_418_ = lean_unsigned_to_nat(0u);
-v___x_419_ = lean_array_get_size(v_params_399_);
-v___x_420_ = lean_nat_dec_lt(v___x_418_, v___x_419_);
-if (v___x_420_ == 0)
+uint64_t v___x_414_; uint64_t v___x_415_; uint64_t v___x_416_; uint64_t v___x_417_; uint64_t v___x_418_; uint64_t v___x_419_; lean_object* v___x_420_; lean_object* v___x_421_; uint8_t v___x_422_; 
+v___x_414_ = lean_uint64_mix_hash(v___x_411_, v___y_413_);
+v___x_415_ = 7ULL;
+v___x_416_ = l_List_foldl___at___00Lean_Compiler_LCNF_instHashableSignature_hash_spec__0(v___x_415_, v_levelParams_399_);
+v___x_417_ = lean_uint64_mix_hash(v___x_414_, v___x_416_);
+v___x_418_ = l_Lean_Expr_hash(v_type_400_);
+v___x_419_ = lean_uint64_mix_hash(v___x_417_, v___x_418_);
+v___x_420_ = lean_unsigned_to_nat(0u);
+v___x_421_ = lean_array_get_size(v_params_401_);
+v___x_422_ = lean_nat_dec_lt(v___x_420_, v___x_421_);
+if (v___x_422_ == 0)
 {
-v___y_402_ = v___x_417_;
-v___y_403_ = v___x_413_;
-goto v___jp_401_;
+v___y_404_ = v___x_419_;
+v___y_405_ = v___x_415_;
+goto v___jp_403_;
 }
 else
 {
-size_t v___x_421_; size_t v___x_422_; uint64_t v___x_423_; 
-v___x_421_ = ((size_t)0ULL);
-v___x_422_ = lean_usize_of_nat(v___x_419_);
-v___x_423_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashParams_spec__0(v_params_399_, v___x_421_, v___x_422_, v___x_413_);
-v___y_402_ = v___x_417_;
-v___y_403_ = v___x_423_;
-goto v___jp_401_;
+size_t v___x_423_; size_t v___x_424_; uint64_t v___x_425_; 
+v___x_423_ = ((size_t)0ULL);
+v___x_424_ = lean_usize_of_nat(v___x_421_);
+v___x_425_ = l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___00Lean_Compiler_LCNF_hashParams_spec__0(v_params_401_, v___x_423_, v___x_424_, v___x_415_);
+v___y_404_ = v___x_419_;
+v___y_405_ = v___x_425_;
+goto v___jp_403_;
 }
 }
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg___boxed(lean_object* v_x_426_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg___boxed(lean_object* v_x_429_){
 _start:
 {
-uint64_t v_res_427_; lean_object* v_r_428_; 
-v_res_427_ = l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(v_x_426_);
-lean_dec_ref(v_x_426_);
-v_r_428_ = lean_box_uint64(v_res_427_);
-return v_r_428_;
+uint64_t v_res_430_; lean_object* v_r_431_; 
+v_res_430_ = l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(v_x_429_);
+lean_dec_ref(v_x_429_);
+v_r_431_ = lean_box_uint64(v_res_430_);
+return v_r_431_;
 }
 }
-LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableSignature_hash(uint8_t v_pu_429_, lean_object* v_x_430_){
+LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableSignature_hash(uint8_t v_pu_432_, lean_object* v_x_433_){
 _start:
 {
-uint64_t v___x_431_; 
-v___x_431_ = l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(v_x_430_);
-return v___x_431_;
+uint64_t v___x_434_; 
+v___x_434_ = l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(v_x_433_);
+return v___x_434_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature_hash___boxed(lean_object* v_pu_432_, lean_object* v_x_433_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature_hash___boxed(lean_object* v_pu_435_, lean_object* v_x_436_){
 _start:
 {
-uint8_t v_pu_265__boxed_434_; uint64_t v_res_435_; lean_object* v_r_436_; 
-v_pu_265__boxed_434_ = lean_unbox(v_pu_432_);
-v_res_435_ = l_Lean_Compiler_LCNF_instHashableSignature_hash(v_pu_265__boxed_434_, v_x_433_);
-lean_dec_ref(v_x_433_);
-v_r_436_ = lean_box_uint64(v_res_435_);
-return v_r_436_;
+uint8_t v_pu_271__boxed_437_; uint64_t v_res_438_; lean_object* v_r_439_; 
+v_pu_271__boxed_437_ = lean_unbox(v_pu_435_);
+v_res_438_ = l_Lean_Compiler_LCNF_instHashableSignature_hash(v_pu_271__boxed_437_, v_x_436_);
+lean_dec_ref(v_x_436_);
+v_r_439_ = lean_box_uint64(v_res_438_);
+return v_r_439_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature(uint8_t v_pu_437_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature(uint8_t v_pu_440_){
 _start:
 {
-lean_object* v___x_438_; lean_object* v___x_439_; 
-v___x_438_ = lean_box(v_pu_437_);
-v___x_439_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableSignature_hash___boxed), 2, 1);
-lean_closure_set(v___x_439_, 0, v___x_438_);
-return v___x_439_;
+lean_object* v___x_441_; lean_object* v___x_442_; 
+v___x_441_ = lean_box(v_pu_440_);
+v___x_442_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableSignature_hash___boxed), 2, 1);
+lean_closure_set(v___x_442_, 0, v___x_441_);
+return v___x_442_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature___boxed(lean_object* v_pu_440_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableSignature___boxed(lean_object* v_pu_443_){
 _start:
 {
-uint8_t v_pu_5__boxed_441_; lean_object* v_res_442_; 
-v_pu_5__boxed_441_ = lean_unbox(v_pu_440_);
-v_res_442_ = l_Lean_Compiler_LCNF_instHashableSignature(v_pu_5__boxed_441_);
-return v_res_442_;
+uint8_t v_pu_5__boxed_444_; lean_object* v_res_445_; 
+v_pu_5__boxed_444_ = lean_unbox(v_pu_443_);
+v_res_445_ = l_Lean_Compiler_LCNF_instHashableSignature(v_pu_5__boxed_444_);
+return v_res_445_;
 }
 }
-LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableDecl_hash(uint8_t v_pu_443_, lean_object* v_x_444_){
+LEAN_EXPORT uint64_t l_Lean_Compiler_LCNF_instHashableDecl_hash(uint8_t v_pu_446_, lean_object* v_x_447_){
 _start:
 {
-lean_object* v_toSignature_445_; lean_object* v_value_446_; uint8_t v_recursive_447_; lean_object* v_inlineAttr_x3f_448_; uint64_t v___x_449_; uint64_t v___x_450_; uint64_t v___x_451_; uint64_t v___x_452_; uint64_t v___x_453_; uint64_t v___y_455_; 
-v_toSignature_445_ = lean_ctor_get(v_x_444_, 0);
-v_value_446_ = lean_ctor_get(v_x_444_, 1);
-v_recursive_447_ = lean_ctor_get_uint8(v_x_444_, sizeof(void*)*3);
-v_inlineAttr_x3f_448_ = lean_ctor_get(v_x_444_, 2);
-v___x_449_ = 0ULL;
-v___x_450_ = l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(v_toSignature_445_);
-v___x_451_ = lean_uint64_mix_hash(v___x_449_, v___x_450_);
-v___x_452_ = l_Lean_Compiler_LCNF_instHashableDeclValue_hash(v_pu_443_, v_value_446_);
-v___x_453_ = lean_uint64_mix_hash(v___x_451_, v___x_452_);
-if (v_recursive_447_ == 0)
+lean_object* v_toSignature_448_; lean_object* v_value_449_; uint8_t v_recursive_450_; lean_object* v_inlineAttr_x3f_451_; uint64_t v___x_452_; uint64_t v___x_453_; uint64_t v___x_454_; uint64_t v___x_455_; uint64_t v___x_456_; uint64_t v___y_458_; 
+v_toSignature_448_ = lean_ctor_get(v_x_447_, 0);
+v_value_449_ = lean_ctor_get(v_x_447_, 1);
+v_recursive_450_ = lean_ctor_get_uint8(v_x_447_, sizeof(void*)*3);
+v_inlineAttr_x3f_451_ = lean_ctor_get(v_x_447_, 2);
+v___x_452_ = 0ULL;
+v___x_453_ = l_Lean_Compiler_LCNF_instHashableSignature_hash___redArg(v_toSignature_448_);
+v___x_454_ = lean_uint64_mix_hash(v___x_452_, v___x_453_);
+v___x_455_ = l_Lean_Compiler_LCNF_instHashableDeclValue_hash(v_pu_446_, v_value_449_);
+v___x_456_ = lean_uint64_mix_hash(v___x_454_, v___x_455_);
+if (v_recursive_450_ == 0)
 {
-uint64_t v___x_465_; 
+uint64_t v___x_468_; 
+v___x_468_ = 13ULL;
+v___y_458_ = v___x_468_;
+goto v___jp_457_;
+}
+else
+{
+uint64_t v___x_469_; 
+v___x_469_ = 11ULL;
+v___y_458_ = v___x_469_;
+goto v___jp_457_;
+}
+v___jp_457_:
+{
+uint64_t v___x_459_; 
+v___x_459_ = lean_uint64_mix_hash(v___x_456_, v___y_458_);
+if (lean_obj_tag(v_inlineAttr_x3f_451_) == 0)
+{
+uint64_t v___x_460_; uint64_t v___x_461_; 
+v___x_460_ = 11ULL;
+v___x_461_ = lean_uint64_mix_hash(v___x_459_, v___x_460_);
+return v___x_461_;
+}
+else
+{
+lean_object* v_val_462_; uint8_t v___x_463_; uint64_t v___x_464_; uint64_t v___x_465_; uint64_t v___x_466_; uint64_t v___x_467_; 
+v_val_462_ = lean_ctor_get(v_inlineAttr_x3f_451_, 0);
+v___x_463_ = lean_unbox(v_val_462_);
+v___x_464_ = l_Lean_Compiler_instHashableInlineAttributeKind_hash(v___x_463_);
 v___x_465_ = 13ULL;
-v___y_455_ = v___x_465_;
-goto v___jp_454_;
-}
-else
-{
-uint64_t v___x_466_; 
-v___x_466_ = 11ULL;
-v___y_455_ = v___x_466_;
-goto v___jp_454_;
-}
-v___jp_454_:
-{
-uint64_t v___x_456_; 
-v___x_456_ = lean_uint64_mix_hash(v___x_453_, v___y_455_);
-if (lean_obj_tag(v_inlineAttr_x3f_448_) == 0)
-{
-uint64_t v___x_457_; uint64_t v___x_458_; 
-v___x_457_ = 11ULL;
-v___x_458_ = lean_uint64_mix_hash(v___x_456_, v___x_457_);
-return v___x_458_;
-}
-else
-{
-lean_object* v_val_459_; uint8_t v___x_460_; uint64_t v___x_461_; uint64_t v___x_462_; uint64_t v___x_463_; uint64_t v___x_464_; 
-v_val_459_ = lean_ctor_get(v_inlineAttr_x3f_448_, 0);
-v___x_460_ = lean_unbox(v_val_459_);
-v___x_461_ = l_Lean_Compiler_instHashableInlineAttributeKind_hash(v___x_460_);
-v___x_462_ = 13ULL;
-v___x_463_ = lean_uint64_mix_hash(v___x_461_, v___x_462_);
-v___x_464_ = lean_uint64_mix_hash(v___x_456_, v___x_463_);
-return v___x_464_;
+v___x_466_ = lean_uint64_mix_hash(v___x_464_, v___x_465_);
+v___x_467_ = lean_uint64_mix_hash(v___x_459_, v___x_466_);
+return v___x_467_;
 }
 }
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDecl_hash___boxed(lean_object* v_pu_467_, lean_object* v_x_468_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDecl_hash___boxed(lean_object* v_pu_470_, lean_object* v_x_471_){
 _start:
 {
-uint8_t v_pu_92__boxed_469_; uint64_t v_res_470_; lean_object* v_r_471_; 
-v_pu_92__boxed_469_ = lean_unbox(v_pu_467_);
-v_res_470_ = l_Lean_Compiler_LCNF_instHashableDecl_hash(v_pu_92__boxed_469_, v_x_468_);
-lean_dec_ref(v_x_468_);
-v_r_471_ = lean_box_uint64(v_res_470_);
-return v_r_471_;
+uint8_t v_pu_92__boxed_472_; uint64_t v_res_473_; lean_object* v_r_474_; 
+v_pu_92__boxed_472_ = lean_unbox(v_pu_470_);
+v_res_473_ = l_Lean_Compiler_LCNF_instHashableDecl_hash(v_pu_92__boxed_472_, v_x_471_);
+lean_dec_ref(v_x_471_);
+v_r_474_ = lean_box_uint64(v_res_473_);
+return v_r_474_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDecl(uint8_t v_pu_472_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDecl(uint8_t v_pu_475_){
 _start:
 {
-lean_object* v___x_473_; lean_object* v___x_474_; 
-v___x_473_ = lean_box(v_pu_472_);
-v___x_474_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableDecl_hash___boxed), 2, 1);
-lean_closure_set(v___x_474_, 0, v___x_473_);
-return v___x_474_;
+lean_object* v___x_476_; lean_object* v___x_477_; 
+v___x_476_ = lean_box(v_pu_475_);
+v___x_477_ = lean_alloc_closure((void*)(l_Lean_Compiler_LCNF_instHashableDecl_hash___boxed), 2, 1);
+lean_closure_set(v___x_477_, 0, v___x_476_);
+return v___x_477_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDecl___boxed(lean_object* v_pu_475_){
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_instHashableDecl___boxed(lean_object* v_pu_478_){
 _start:
 {
-uint8_t v_pu_5__boxed_476_; lean_object* v_res_477_; 
-v_pu_5__boxed_476_ = lean_unbox(v_pu_475_);
-v_res_477_ = l_Lean_Compiler_LCNF_instHashableDecl(v_pu_5__boxed_476_);
-return v_res_477_;
+uint8_t v_pu_5__boxed_479_; lean_object* v_res_480_; 
+v_pu_5__boxed_479_ = lean_unbox(v_pu_478_);
+v_res_480_ = l_Lean_Compiler_LCNF_instHashableDecl(v_pu_5__boxed_479_);
+return v_res_480_;
 }
 }
 lean_object* runtime_initialize_Lean_Compiler_LCNF_Basic(uint8_t builtin);

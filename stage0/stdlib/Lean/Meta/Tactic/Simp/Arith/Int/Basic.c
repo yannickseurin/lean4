@@ -8076,6 +8076,7 @@ v_resetjp_2152_:
 {
 lean_object* v___x_2155_; lean_object* v_fst_2156_; lean_object* v_snd_2157_; lean_object* v___x_2159_; uint8_t v_isShared_2160_; uint8_t v_isSharedCheck_2168_; 
 v___x_2155_ = l_Lean_sortExprs(v_snd_2148_, v___x_2151_);
+lean_dec(v_snd_2148_);
 v_fst_2156_ = lean_ctor_get(v___x_2155_, 0);
 v_snd_2157_ = lean_ctor_get(v___x_2155_, 1);
 v_isSharedCheck_2168_ = !lean_is_exclusive(v___x_2155_);
@@ -8268,6 +8269,7 @@ if (v___x_2207_ == 0)
 lean_object* v___x_2208_; lean_object* v_fst_2209_; lean_object* v_snd_2210_; lean_object* v___x_2212_; uint8_t v_isShared_2213_; uint8_t v_isSharedCheck_2228_; 
 lean_del_object(v___x_2198_);
 v___x_2208_ = l_Lean_sortExprs(v_snd_2196_, v___x_2207_);
+lean_dec(v_snd_2196_);
 v_fst_2209_ = lean_ctor_get(v___x_2208_, 0);
 v_snd_2210_ = lean_ctor_get(v___x_2208_, 1);
 v_isSharedCheck_2228_ = !lean_is_exclusive(v___x_2208_);
@@ -8640,6 +8642,7 @@ if (v___x_2294_ == 0)
 lean_object* v___x_2295_; lean_object* v_fst_2296_; lean_object* v_snd_2297_; lean_object* v___x_2299_; uint8_t v_isShared_2300_; uint8_t v_isSharedCheck_2315_; 
 lean_del_object(v___x_2285_);
 v___x_2295_ = l_Lean_sortExprs(v_snd_2283_, v___x_2294_);
+lean_dec(v_snd_2283_);
 v_fst_2296_ = lean_ctor_get(v___x_2295_, 0);
 v_snd_2297_ = lean_ctor_get(v___x_2295_, 1);
 v_isSharedCheck_2315_ = !lean_is_exclusive(v___x_2295_);
@@ -9012,6 +9015,7 @@ if (v___x_2380_ == 0)
 lean_object* v___x_2381_; lean_object* v_fst_2382_; lean_object* v_snd_2383_; lean_object* v___x_2385_; uint8_t v_isShared_2386_; uint8_t v_isSharedCheck_2401_; 
 lean_del_object(v___x_2371_);
 v___x_2381_ = l_Lean_sortExprs(v_snd_2369_, v___x_2380_);
+lean_dec(v_snd_2369_);
 v_fst_2382_ = lean_ctor_get(v___x_2381_, 0);
 v_snd_2383_ = lean_ctor_get(v___x_2381_, 1);
 v_isSharedCheck_2401_ = !lean_is_exclusive(v___x_2381_);
@@ -9384,6 +9388,7 @@ if (v___x_2466_ == 0)
 lean_object* v___x_2467_; lean_object* v_fst_2468_; lean_object* v_snd_2469_; lean_object* v___x_2471_; uint8_t v_isShared_2472_; uint8_t v_isSharedCheck_2486_; 
 lean_del_object(v___x_2457_);
 v___x_2467_ = l_Lean_sortExprs(v_snd_2455_, v___x_2466_);
+lean_dec(v_snd_2455_);
 v_fst_2468_ = lean_ctor_get(v___x_2467_, 0);
 v_snd_2469_ = lean_ctor_get(v___x_2467_, 1);
 v_isSharedCheck_2486_ = !lean_is_exclusive(v___x_2467_);

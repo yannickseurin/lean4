@@ -15,6 +15,7 @@ extern "C" {
 #endif
 lean_object* l_Lean_Name_mkStr1(lean_object*);
 lean_object* lean_st_ref_get(lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 lean_object* l_Lean_Environment_setExporting(lean_object*, uint8_t);
 uint8_t l_Lean_Environment_contains(lean_object*, lean_object*, uint8_t);
@@ -980,7 +981,7 @@ LEAN_EXPORT lean_object* l_Lean_mkUnknownIdentifierMessageCore___at___00Lean_mkU
 _start:
 {
 lean_object* v___x_232_; lean_object* v___x_233_; lean_object* v_env_234_; uint8_t v___x_235_; 
-v___x_232_ = lean_box(0);
+v___x_232_ = l_Lean_instInhabitedName;
 v___x_233_ = lean_st_ref_get(v___y_230_);
 v_env_234_ = lean_ctor_get(v___x_233_, 0);
 lean_inc_ref(v_env_234_);
@@ -1080,6 +1081,7 @@ lean_object* v___x_259_; lean_object* v___x_260_; lean_object* v_mod_261_; uint8
 v___x_259_ = l_Lean_Environment_header(v_env_234_);
 lean_dec_ref(v_env_234_);
 v___x_260_ = l_Lean_EnvironmentHeader_moduleNames(v___x_259_);
+lean_dec_ref(v___x_259_);
 v_mod_261_ = lean_array_get(v___x_232_, v___x_260_, v_val_255_);
 lean_dec(v_val_255_);
 lean_dec_ref(v___x_260_);

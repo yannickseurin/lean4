@@ -18,6 +18,7 @@ extern lean_object* l_Lean_Elab_Command_instInhabitedScope_default;
 lean_object* l_List_head_x21___redArg(lean_object*, lean_object*);
 lean_object* l_Lean_PersistentHashMap_mkEmptyEntriesArray___redArg();
 lean_object* lean_mk_empty_array_with_capacity(lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 lean_object* l_Lean_Environment_setExporting(lean_object*, uint8_t);
 uint8_t l_Lean_Environment_contains(lean_object*, lean_object*, uint8_t);
@@ -1931,7 +1932,7 @@ LEAN_EXPORT lean_object* l_Lean_mkUnknownIdentifierMessageCore___at___00Lean_mkU
 _start:
 {
 lean_object* v___x_659_; lean_object* v___x_660_; lean_object* v_env_661_; uint8_t v___x_662_; 
-v___x_659_ = lean_box(0);
+v___x_659_ = l_Lean_instInhabitedName;
 v___x_660_ = lean_st_ref_get(v___y_657_);
 v_env_661_ = lean_ctor_get(v___x_660_, 0);
 lean_inc_ref(v_env_661_);
@@ -2031,6 +2032,7 @@ lean_object* v___x_686_; lean_object* v___x_687_; lean_object* v_mod_688_; uint8
 v___x_686_ = l_Lean_Environment_header(v_env_661_);
 lean_dec_ref(v_env_661_);
 v___x_687_ = l_Lean_EnvironmentHeader_moduleNames(v___x_686_);
+lean_dec_ref(v___x_686_);
 v_mod_688_ = lean_array_get(v___x_659_, v___x_687_, v_val_682_);
 lean_dec(v_val_682_);
 lean_dec_ref(v___x_687_);

@@ -118,6 +118,7 @@ lean_object* lean_io_promise_new();
 lean_object* l_Std_CancellationContext_cancel(lean_object*, lean_object*);
 lean_object* l_Std_CancellationContext_fork(lean_object*);
 extern lean_object* l_Std_Http_Extensions_empty;
+lean_object* l___private_Init_Dynamic_0__Dynamic_mkImpl___redArg(lean_object*, lean_object*);
 lean_object* l___private_Init_Dynamic_0__Dynamic_typeNameImpl(lean_object*);
 uint8_t l_Std_Http_Extensions_compareName(lean_object*, lean_object*);
 lean_object* lean_uv_tcp_getpeername(lean_object*);
@@ -21128,7 +21129,6 @@ if (lean_obj_tag(v_x_6592_) == 0)
 {
 lean_object* v_a_6594_; lean_object* v___x_6596_; uint8_t v_isShared_6597_; uint8_t v_isSharedCheck_6602_; 
 lean_dec_ref(v___f_6591_);
-lean_dec(v___x_6590_);
 lean_dec_ref(v___f_6589_);
 v_a_6594_ = lean_ctor_get(v_x_6592_, 0);
 v_isSharedCheck_6602_ = !lean_is_exclusive(v_x_6592_);
@@ -21182,7 +21182,6 @@ if (lean_obj_tag(v_a_6603_) == 0)
 lean_object* v___x_6604_; lean_object* v___x_6605_; lean_object* v___x_6606_; 
 lean_dec_ref_known(v_a_6603_, 1);
 lean_dec_ref(v___f_6591_);
-lean_dec(v___x_6590_);
 v___x_6604_ = lean_unsigned_to_nat(0u);
 v___x_6605_ = lean_obj_once(&l___private_Init_While_0__repeatM_erased___at___00Std_Http_Server_serve___at___00Lean_Firefox_Profile_serve_spec__6_spec__11___redArg___lam__25___closed__1, &l___private_Init_While_0__repeatM_erased___at___00Std_Http_Server_serve___at___00Lean_Firefox_Profile_serve_spec__6_spec__11___redArg___lam__25___closed__1_once, _init_l___private_Init_While_0__repeatM_erased___at___00Std_Http_Server_serve___at___00Lean_Firefox_Profile_serve_spec__6_spec__11___redArg___lam__25___closed__1);
 v___x_6606_ = l___private_Std_Async_Basic_0__Std_Async_BaseAsync_bind_bindAsyncTask(lean_box(0), lean_box(0), v___x_6604_, v___x_6588_, v___x_6605_, v___f_6589_);
@@ -21212,9 +21211,8 @@ v_resetjp_6608_:
 {
 lean_object* v___x_6611_; lean_object* v_dyn_6612_; lean_object* v___x_6613_; lean_object* v___x_6614_; lean_object* v___x_6615_; lean_object* v___x_6617_; 
 v___x_6611_ = l_Std_Http_Extensions_empty;
-v_dyn_6612_ = lean_alloc_ctor(0, 2, 0);
-lean_ctor_set(v_dyn_6612_, 0, v___x_6590_);
-lean_ctor_set(v_dyn_6612_, 1, v_a_6607_);
+v_dyn_6612_ = l___private_Init_Dynamic_0__Dynamic_mkImpl___redArg(v___x_6590_, v_a_6607_);
+lean_dec(v_a_6607_);
 v___x_6613_ = l___private_Init_Dynamic_0__Dynamic_typeNameImpl(v_dyn_6612_);
 v___x_6614_ = l_Std_DTreeMap_Internal_Impl_insert___at___00Std_Http_Server_serve___at___00Lean_Firefox_Profile_serve_spec__6_spec__10___redArg(v___x_6613_, v_dyn_6612_, v___x_6611_);
 v___x_6615_ = lean_unsigned_to_nat(0u);
@@ -21251,6 +21249,7 @@ _start:
 uint8_t v___x_35714__boxed_6628_; lean_object* v_res_6629_; 
 v___x_35714__boxed_6628_ = lean_unbox(v___x_6622_);
 v_res_6629_ = l___private_Init_While_0__repeatM_erased___at___00Std_Http_Server_serve___at___00Lean_Firefox_Profile_serve_spec__6_spec__11___redArg___lam__25(v___x_35714__boxed_6628_, v___f_6623_, v___x_6624_, v___f_6625_, v_x_6626_);
+lean_dec(v___x_6624_);
 return v_res_6629_;
 }
 }

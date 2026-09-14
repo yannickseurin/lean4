@@ -31,6 +31,7 @@ uint8_t lean_nat_dec_le(lean_object*, lean_object*);
 lean_object* l___private_Init_Data_Array_QSort_Basic_0__Array_qsort_sort(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_stringToMessageData(lean_object*);
 lean_object* l_Lean_MessageData_ofConstName(lean_object*, uint8_t);
+extern lean_object* l_Lean_instInhabitedName;
 lean_object* lean_st_ref_get(lean_object*);
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 lean_object* l_Lean_Environment_setExporting(lean_object*, uint8_t);
@@ -241,8 +242,8 @@ LEAN_EXPORT lean_object* l_Lean_Meta_collectAboveThreshold___at___00Lean_Meta_mk
 LEAN_EXPORT lean_object* l_Lean_Meta_collectAboveThreshold___at___00Lean_Meta_mkDiagSummary_spec__1___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 static const lean_closure_object l_Lean_Meta_mkDiagSummary___closed__0_value = {.m_header = {.m_rc = 0, .m_cs_sz = sizeof(lean_closure_object) + sizeof(void*)*0, .m_other = 0, .m_tag = 245}, .m_fun = (void*)l_Lean_Name_lt___boxed, .m_arity = 2, .m_num_fixed = 0, .m_objs = {} };
 static const lean_object* l_Lean_Meta_mkDiagSummary___closed__0 = (const lean_object*)&l_Lean_Meta_mkDiagSummary___closed__0_value;
-static const lean_ctor_object l_Lean_Meta_mkDiagSummary___closed__1_value = {.m_header = {.m_rc = 0, .m_cs_sz = sizeof(lean_ctor_object) + sizeof(void*)*2 + 0, .m_other = 2, .m_tag = 0}, .m_objs = {((lean_object*)(((size_t)(0) << 1) | 1)),((lean_object*)(((size_t)(0) << 1) | 1))}};
-static const lean_object* l_Lean_Meta_mkDiagSummary___closed__1 = (const lean_object*)&l_Lean_Meta_mkDiagSummary___closed__1_value;
+static lean_once_cell_t l_Lean_Meta_mkDiagSummary___closed__1_once = LEAN_ONCE_CELL_INITIALIZER;
+static lean_object* l_Lean_Meta_mkDiagSummary___closed__1;
 LEAN_EXPORT lean_object* l_Lean_Meta_mkDiagSummary(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_mkDiagSummary___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_forIn___at___00Lean_Meta_collectAboveThreshold___at___00Lean_Meta_mkDiagSummary_spec__1_spec__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -1021,7 +1022,7 @@ LEAN_EXPORT lean_object* l_Lean_mkUnknownIdentifierMessageCore___at___00Lean_mkU
 _start:
 {
 lean_object* v___x_234_; lean_object* v___x_235_; lean_object* v_env_236_; uint8_t v___x_237_; 
-v___x_234_ = lean_box(0);
+v___x_234_ = l_Lean_instInhabitedName;
 v___x_235_ = lean_st_ref_get(v___y_232_);
 v_env_236_ = lean_ctor_get(v___x_235_, 0);
 lean_inc_ref(v_env_236_);
@@ -1121,6 +1122,7 @@ lean_object* v___x_261_; lean_object* v___x_262_; lean_object* v_mod_263_; uint8
 v___x_261_ = l_Lean_Environment_header(v_env_236_);
 lean_dec_ref(v_env_236_);
 v___x_262_ = l_Lean_EnvironmentHeader_moduleNames(v___x_261_);
+lean_dec_ref(v___x_261_);
 v_mod_263_ = lean_array_get(v___x_234_, v___x_262_, v_val_257_);
 lean_dec(v_val_257_);
 lean_dec_ref(v___x_262_);
@@ -2615,6 +2617,18 @@ lean_dec_ref(v_counters_818_);
 return v_res_822_;
 }
 }
+static lean_object* _init_l_Lean_Meta_mkDiagSummary___closed__1(void){
+_start:
+{
+lean_object* v___x_824_; lean_object* v___x_825_; lean_object* v___x_826_; 
+v___x_824_ = lean_unsigned_to_nat(0u);
+v___x_825_ = l_Lean_instInhabitedName;
+v___x_826_ = lean_alloc_ctor(0, 2, 0);
+lean_ctor_set(v___x_826_, 0, v___x_825_);
+lean_ctor_set(v___x_826_, 1, v___x_824_);
+return v___x_826_;
+}
+}
 LEAN_EXPORT lean_object* l_Lean_Meta_mkDiagSummary(lean_object* v_cls_827_, lean_object* v_counters_828_, lean_object* v_p_829_, lean_object* v_a_830_, lean_object* v_a_831_, lean_object* v_a_832_, lean_object* v_a_833_){
 _start:
 {
@@ -2631,7 +2645,7 @@ v___x_843_ = lean_nat_dec_eq(v___x_841_, v___x_842_);
 if (v___x_843_ == 0)
 {
 lean_object* v___x_844_; lean_object* v___x_845_; size_t v_sz_846_; size_t v___x_847_; lean_object* v___x_848_; 
-v___x_844_ = ((lean_object*)(l_Lean_Meta_mkDiagSummary___closed__1));
+v___x_844_ = lean_obj_once(&l_Lean_Meta_mkDiagSummary___closed__1, &l_Lean_Meta_mkDiagSummary___closed__1_once, _init_l_Lean_Meta_mkDiagSummary___closed__1);
 v___x_845_ = ((lean_object*)(l_Lean_Meta_instInhabitedDiagSummary_default___closed__0));
 v_sz_846_ = lean_array_size(v___x_840_);
 v___x_847_ = ((size_t)0ULL);

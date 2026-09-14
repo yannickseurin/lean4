@@ -34,6 +34,7 @@ lean_object* l_Std_Async_BaseAsync_toRawBaseIO___boxed(lean_object*, lean_object
 lean_object* lean_io_as_task(lean_object*, lean_object*);
 lean_object* l_Std_CancellationContext_fork(lean_object*);
 extern lean_object* l_Std_Http_Extensions_empty;
+lean_object* l___private_Init_Dynamic_0__Dynamic_mkImpl___redArg(lean_object*, lean_object*);
 lean_object* l_Std_Http_Extensions_compareName___boxed(lean_object*, lean_object*);
 lean_object* l___private_Init_Dynamic_0__Dynamic_typeNameImpl(lean_object*);
 lean_object* l_Std_DTreeMap_Internal_Impl_insert___redArg(lean_object*, lean_object*, lean_object*, lean_object*);
@@ -2935,7 +2936,6 @@ if (lean_obj_tag(v_x_971_) == 0)
 {
 lean_object* v_a_973_; lean_object* v___x_975_; uint8_t v_isShared_976_; uint8_t v_isSharedCheck_981_; 
 lean_dec_ref(v___f_970_);
-lean_dec(v___x_969_);
 lean_dec_ref(v___f_968_);
 v_a_973_ = lean_ctor_get(v_x_971_, 0);
 v_isSharedCheck_981_ = !lean_is_exclusive(v_x_971_);
@@ -2989,7 +2989,6 @@ if (lean_obj_tag(v_a_982_) == 0)
 lean_object* v___x_983_; lean_object* v___x_984_; lean_object* v___x_985_; 
 lean_dec_ref_known(v_a_982_, 1);
 lean_dec_ref(v___f_970_);
-lean_dec(v___x_969_);
 v___x_983_ = lean_unsigned_to_nat(0u);
 v___x_984_ = lean_obj_once(&l_Std_Http_Server_serve___redArg___lam__20___closed__1, &l_Std_Http_Server_serve___redArg___lam__20___closed__1_once, _init_l_Std_Http_Server_serve___redArg___lam__20___closed__1);
 v___x_985_ = l___private_Std_Async_Basic_0__Std_Async_BaseAsync_bind_bindAsyncTask(lean_box(0), lean_box(0), v___x_983_, v___x_967_, v___x_984_, v___f_968_);
@@ -3019,9 +3018,8 @@ v_resetjp_987_:
 {
 lean_object* v___x_990_; lean_object* v_dyn_991_; lean_object* v___x_992_; lean_object* v___x_993_; lean_object* v___x_994_; lean_object* v___x_995_; lean_object* v___x_997_; 
 v___x_990_ = l_Std_Http_Extensions_empty;
-v_dyn_991_ = lean_alloc_ctor(0, 2, 0);
-lean_ctor_set(v_dyn_991_, 0, v___x_969_);
-lean_ctor_set(v_dyn_991_, 1, v_a_986_);
+v_dyn_991_ = l___private_Init_Dynamic_0__Dynamic_mkImpl___redArg(v___x_969_, v_a_986_);
+lean_dec(v_a_986_);
 v___x_992_ = ((lean_object*)(l_Std_Http_Server_serve___redArg___lam__20___closed__2));
 v___x_993_ = l___private_Init_Dynamic_0__Dynamic_typeNameImpl(v_dyn_991_);
 v___x_994_ = l_Std_DTreeMap_Internal_Impl_insert___redArg(v___x_992_, v___x_993_, v_dyn_991_, v___x_990_);
@@ -3059,6 +3057,7 @@ _start:
 uint8_t v___x_14020__boxed_1008_; lean_object* v_res_1009_; 
 v___x_14020__boxed_1008_ = lean_unbox(v___x_1002_);
 v_res_1009_ = l_Std_Http_Server_serve___redArg___lam__20(v___x_14020__boxed_1008_, v___f_1003_, v___x_1004_, v___f_1005_, v_x_1006_);
+lean_dec(v___x_1004_);
 return v_res_1009_;
 }
 }

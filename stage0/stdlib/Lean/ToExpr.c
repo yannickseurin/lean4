@@ -26,6 +26,7 @@ lean_object* l_Lean_mkRawNatLit(lean_object*);
 lean_object* l_Lean_mkApp3(lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_uint64_to_nat(uint64_t);
 lean_object* l_Lean_mkNatLit(lean_object*);
+lean_object* l_unsafeCast___redArg(lean_object*);
 extern lean_object* l_Lean_instInhabitedExpr;
 lean_object* lean_panic_fn_borrowed(lean_object*, lean_object*);
 lean_object* lean_nat_to_int(lean_object*);
@@ -737,8 +738,8 @@ static const lean_ctor_object l_Lean_instToExprPreresolved___lam__0___closed__6_
 static const lean_object* l_Lean_instToExprPreresolved___lam__0___closed__6 = (const lean_object*)&l_Lean_instToExprPreresolved___lam__0___closed__6_value;
 static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__7_once = LEAN_ONCE_CELL_INITIALIZER;
 static lean_object* l_Lean_instToExprPreresolved___lam__0___closed__7;
-static const lean_ctor_object l_Lean_instToExprPreresolved___lam__0___closed__8_value = {.m_header = {.m_rc = 0, .m_cs_sz = sizeof(lean_ctor_object) + sizeof(void*)*2 + 0, .m_other = 2, .m_tag = 1}, .m_objs = {((lean_object*)(((size_t)(0) << 1) | 1)),((lean_object*)(((size_t)(0) << 1) | 1))}};
-static const lean_object* l_Lean_instToExprPreresolved___lam__0___closed__8 = (const lean_object*)&l_Lean_instToExprPreresolved___lam__0___closed__8_value;
+static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__8_once = LEAN_ONCE_CELL_INITIALIZER;
+static lean_object* l_Lean_instToExprPreresolved___lam__0___closed__8;
 static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__9_once = LEAN_ONCE_CELL_INITIALIZER;
 static lean_object* l_Lean_instToExprPreresolved___lam__0___closed__9;
 static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__10_once = LEAN_ONCE_CELL_INITIALIZER;
@@ -747,6 +748,8 @@ static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__11_once 
 static lean_object* l_Lean_instToExprPreresolved___lam__0___closed__11;
 static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__12_once = LEAN_ONCE_CELL_INITIALIZER;
 static lean_object* l_Lean_instToExprPreresolved___lam__0___closed__12;
+static lean_once_cell_t l_Lean_instToExprPreresolved___lam__0___closed__13_once = LEAN_ONCE_CELL_INITIALIZER;
+static lean_object* l_Lean_instToExprPreresolved___lam__0___closed__13;
 LEAN_EXPORT lean_object* l_Lean_instToExprPreresolved___lam__0(lean_object*, lean_object*);
 static lean_once_cell_t l_Lean_instToExprPreresolved___closed__0_once = LEAN_ONCE_CELL_INITIALIZER;
 static lean_object* l_Lean_instToExprPreresolved___closed__0;
@@ -3329,117 +3332,138 @@ v___x_1162_ = l_Lean_Expr_const___override(v___x_1161_, v___x_1160_);
 return v___x_1162_;
 }
 }
+static lean_object* _init_l_Lean_instToExprPreresolved___lam__0___closed__8(void){
+_start:
+{
+lean_object* v___x_1163_; lean_object* v___x_1164_; 
+v___x_1163_ = lean_box(0);
+v___x_1164_ = l_unsafeCast___redArg(v___x_1163_);
+return v___x_1164_;
+}
+}
 static lean_object* _init_l_Lean_instToExprPreresolved___lam__0___closed__9(void){
 _start:
 {
-lean_object* v___x_1166_; lean_object* v___x_1167_; lean_object* v___x_1168_; 
-v___x_1166_ = ((lean_object*)(l_Lean_instToExprPreresolved___lam__0___closed__8));
-v___x_1167_ = ((lean_object*)(l_Lean_instToExprListOfToLevel___redArg___closed__2));
-v___x_1168_ = l_Lean_mkConst(v___x_1167_, v___x_1166_);
-return v___x_1168_;
+lean_object* v___x_1165_; lean_object* v___x_1166_; lean_object* v___x_1167_; 
+v___x_1165_ = lean_box(0);
+v___x_1166_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__8, &l_Lean_instToExprPreresolved___lam__0___closed__8_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__8);
+v___x_1167_ = lean_alloc_ctor(1, 2, 0);
+lean_ctor_set(v___x_1167_, 0, v___x_1166_);
+lean_ctor_set(v___x_1167_, 1, v___x_1165_);
+return v___x_1167_;
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved___lam__0___closed__10(void){
 _start:
 {
-lean_object* v_type_1169_; lean_object* v___x_1170_; lean_object* v_nil_1171_; 
-v_type_1169_ = lean_obj_once(&l_Lean_instToExprString___closed__3, &l_Lean_instToExprString___closed__3_once, _init_l_Lean_instToExprString___closed__3);
-v___x_1170_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__9, &l_Lean_instToExprPreresolved___lam__0___closed__9_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__9);
-v_nil_1171_ = l_Lean_Expr_app___override(v___x_1170_, v_type_1169_);
-return v_nil_1171_;
+lean_object* v___x_1168_; lean_object* v___x_1169_; lean_object* v___x_1170_; 
+v___x_1168_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__9, &l_Lean_instToExprPreresolved___lam__0___closed__9_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__9);
+v___x_1169_ = ((lean_object*)(l_Lean_instToExprListOfToLevel___redArg___closed__2));
+v___x_1170_ = l_Lean_mkConst(v___x_1169_, v___x_1168_);
+return v___x_1170_;
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved___lam__0___closed__11(void){
 _start:
 {
-lean_object* v___x_1172_; lean_object* v___x_1173_; lean_object* v___x_1174_; 
-v___x_1172_ = ((lean_object*)(l_Lean_instToExprPreresolved___lam__0___closed__8));
-v___x_1173_ = ((lean_object*)(l_Lean_instToExprListOfToLevel___redArg___closed__4));
-v___x_1174_ = l_Lean_mkConst(v___x_1173_, v___x_1172_);
-return v___x_1174_;
+lean_object* v_type_1171_; lean_object* v___x_1172_; lean_object* v_nil_1173_; 
+v_type_1171_ = lean_obj_once(&l_Lean_instToExprString___closed__3, &l_Lean_instToExprString___closed__3_once, _init_l_Lean_instToExprString___closed__3);
+v___x_1172_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__10, &l_Lean_instToExprPreresolved___lam__0___closed__10_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__10);
+v_nil_1173_ = l_Lean_Expr_app___override(v___x_1172_, v_type_1171_);
+return v_nil_1173_;
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved___lam__0___closed__12(void){
 _start:
 {
-lean_object* v_type_1175_; lean_object* v___x_1176_; lean_object* v_cons_1177_; 
-v_type_1175_ = lean_obj_once(&l_Lean_instToExprString___closed__3, &l_Lean_instToExprString___closed__3_once, _init_l_Lean_instToExprString___closed__3);
-v___x_1176_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__11, &l_Lean_instToExprPreresolved___lam__0___closed__11_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__11);
-v_cons_1177_ = l_Lean_Expr_app___override(v___x_1176_, v_type_1175_);
-return v_cons_1177_;
+lean_object* v___x_1174_; lean_object* v___x_1175_; lean_object* v___x_1176_; 
+v___x_1174_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__9, &l_Lean_instToExprPreresolved___lam__0___closed__9_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__9);
+v___x_1175_ = ((lean_object*)(l_Lean_instToExprListOfToLevel___redArg___closed__4));
+v___x_1176_ = l_Lean_mkConst(v___x_1175_, v___x_1174_);
+return v___x_1176_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_instToExprPreresolved___lam__0(lean_object* v___x_1178_, lean_object* v_x_1179_){
+static lean_object* _init_l_Lean_instToExprPreresolved___lam__0___closed__13(void){
 _start:
 {
-if (lean_obj_tag(v_x_1179_) == 0)
+lean_object* v_type_1177_; lean_object* v___x_1178_; lean_object* v_cons_1179_; 
+v_type_1177_ = lean_obj_once(&l_Lean_instToExprString___closed__3, &l_Lean_instToExprString___closed__3_once, _init_l_Lean_instToExprString___closed__3);
+v___x_1178_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__12, &l_Lean_instToExprPreresolved___lam__0___closed__12_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__12);
+v_cons_1179_ = l_Lean_Expr_app___override(v___x_1178_, v_type_1177_);
+return v_cons_1179_;
+}
+}
+LEAN_EXPORT lean_object* l_Lean_instToExprPreresolved___lam__0(lean_object* v___x_1180_, lean_object* v_x_1181_){
+_start:
 {
-lean_object* v_ns_1180_; lean_object* v___x_1181_; lean_object* v___x_1182_; lean_object* v___x_1183_; 
-lean_dec_ref(v___x_1178_);
-v_ns_1180_ = lean_ctor_get(v_x_1179_, 0);
-lean_inc(v_ns_1180_);
-lean_dec_ref_known(v_x_1179_, 1);
-v___x_1181_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__4, &l_Lean_instToExprPreresolved___lam__0___closed__4_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__4);
-v___x_1182_ = l___private_Lean_ToExpr_0__Lean_Name_toExprAux(v_ns_1180_);
-v___x_1183_ = l_Lean_Expr_app___override(v___x_1181_, v___x_1182_);
-return v___x_1183_;
+if (lean_obj_tag(v_x_1181_) == 0)
+{
+lean_object* v_ns_1182_; lean_object* v___x_1183_; lean_object* v___x_1184_; lean_object* v___x_1185_; 
+lean_dec_ref(v___x_1180_);
+v_ns_1182_ = lean_ctor_get(v_x_1181_, 0);
+lean_inc(v_ns_1182_);
+lean_dec_ref_known(v_x_1181_, 1);
+v___x_1183_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__4, &l_Lean_instToExprPreresolved___lam__0___closed__4_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__4);
+v___x_1184_ = l___private_Lean_ToExpr_0__Lean_Name_toExprAux(v_ns_1182_);
+v___x_1185_ = l_Lean_Expr_app___override(v___x_1183_, v___x_1184_);
+return v___x_1185_;
 }
 else
 {
-lean_object* v_n_1184_; lean_object* v_fields_1185_; lean_object* v___x_1186_; lean_object* v___x_1187_; lean_object* v_nil_1188_; lean_object* v_cons_1189_; lean_object* v___x_1190_; lean_object* v___x_1191_; 
-v_n_1184_ = lean_ctor_get(v_x_1179_, 0);
-lean_inc(v_n_1184_);
-v_fields_1185_ = lean_ctor_get(v_x_1179_, 1);
-lean_inc(v_fields_1185_);
-lean_dec_ref_known(v_x_1179_, 2);
-v___x_1186_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__7, &l_Lean_instToExprPreresolved___lam__0___closed__7_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__7);
-v___x_1187_ = l___private_Lean_ToExpr_0__Lean_Name_toExprAux(v_n_1184_);
-v_nil_1188_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__10, &l_Lean_instToExprPreresolved___lam__0___closed__10_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__10);
-v_cons_1189_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__12, &l_Lean_instToExprPreresolved___lam__0___closed__12_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__12);
-v___x_1190_ = l___private_Lean_ToExpr_0__Lean_List_toExprAux___redArg(v___x_1178_, v_nil_1188_, v_cons_1189_, v_fields_1185_);
-v___x_1191_ = l_Lean_mkAppB(v___x_1186_, v___x_1187_, v___x_1190_);
-return v___x_1191_;
+lean_object* v_n_1186_; lean_object* v_fields_1187_; lean_object* v___x_1188_; lean_object* v___x_1189_; lean_object* v_nil_1190_; lean_object* v_cons_1191_; lean_object* v___x_1192_; lean_object* v___x_1193_; 
+v_n_1186_ = lean_ctor_get(v_x_1181_, 0);
+lean_inc(v_n_1186_);
+v_fields_1187_ = lean_ctor_get(v_x_1181_, 1);
+lean_inc(v_fields_1187_);
+lean_dec_ref_known(v_x_1181_, 2);
+v___x_1188_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__7, &l_Lean_instToExprPreresolved___lam__0___closed__7_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__7);
+v___x_1189_ = l___private_Lean_ToExpr_0__Lean_Name_toExprAux(v_n_1186_);
+v_nil_1190_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__11, &l_Lean_instToExprPreresolved___lam__0___closed__11_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__11);
+v_cons_1191_ = lean_obj_once(&l_Lean_instToExprPreresolved___lam__0___closed__13, &l_Lean_instToExprPreresolved___lam__0___closed__13_once, _init_l_Lean_instToExprPreresolved___lam__0___closed__13);
+v___x_1192_ = l___private_Lean_ToExpr_0__Lean_List_toExprAux___redArg(v___x_1180_, v_nil_1190_, v_cons_1191_, v_fields_1187_);
+v___x_1193_ = l_Lean_mkAppB(v___x_1188_, v___x_1189_, v___x_1192_);
+return v___x_1193_;
 }
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved___closed__0(void){
 _start:
 {
-lean_object* v___x_1192_; lean_object* v___f_1193_; 
-v___x_1192_ = l_Lean_instToExprString;
-v___f_1193_ = lean_alloc_closure((void*)(l_Lean_instToExprPreresolved___lam__0), 2, 1);
-lean_closure_set(v___f_1193_, 0, v___x_1192_);
-return v___f_1193_;
+lean_object* v___x_1194_; lean_object* v___f_1195_; 
+v___x_1194_ = l_Lean_instToExprString;
+v___f_1195_ = lean_alloc_closure((void*)(l_Lean_instToExprPreresolved___lam__0), 2, 1);
+lean_closure_set(v___f_1195_, 0, v___x_1194_);
+return v___f_1195_;
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved___closed__2(void){
 _start:
 {
-lean_object* v___x_1198_; lean_object* v___x_1199_; lean_object* v___x_1200_; 
-v___x_1198_ = lean_box(0);
-v___x_1199_ = ((lean_object*)(l_Lean_instToExprPreresolved___closed__1));
-v___x_1200_ = l_Lean_Expr_const___override(v___x_1199_, v___x_1198_);
-return v___x_1200_;
+lean_object* v___x_1200_; lean_object* v___x_1201_; lean_object* v___x_1202_; 
+v___x_1200_ = lean_box(0);
+v___x_1201_ = ((lean_object*)(l_Lean_instToExprPreresolved___closed__1));
+v___x_1202_ = l_Lean_Expr_const___override(v___x_1201_, v___x_1200_);
+return v___x_1202_;
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved___closed__3(void){
 _start:
 {
-lean_object* v___x_1201_; lean_object* v___f_1202_; lean_object* v___x_1203_; 
-v___x_1201_ = lean_obj_once(&l_Lean_instToExprPreresolved___closed__2, &l_Lean_instToExprPreresolved___closed__2_once, _init_l_Lean_instToExprPreresolved___closed__2);
-v___f_1202_ = lean_obj_once(&l_Lean_instToExprPreresolved___closed__0, &l_Lean_instToExprPreresolved___closed__0_once, _init_l_Lean_instToExprPreresolved___closed__0);
-v___x_1203_ = lean_alloc_ctor(0, 2, 0);
-lean_ctor_set(v___x_1203_, 0, v___f_1202_);
-lean_ctor_set(v___x_1203_, 1, v___x_1201_);
-return v___x_1203_;
+lean_object* v___x_1203_; lean_object* v___f_1204_; lean_object* v___x_1205_; 
+v___x_1203_ = lean_obj_once(&l_Lean_instToExprPreresolved___closed__2, &l_Lean_instToExprPreresolved___closed__2_once, _init_l_Lean_instToExprPreresolved___closed__2);
+v___f_1204_ = lean_obj_once(&l_Lean_instToExprPreresolved___closed__0, &l_Lean_instToExprPreresolved___closed__0_once, _init_l_Lean_instToExprPreresolved___closed__0);
+v___x_1205_ = lean_alloc_ctor(0, 2, 0);
+lean_ctor_set(v___x_1205_, 0, v___f_1204_);
+lean_ctor_set(v___x_1205_, 1, v___x_1203_);
+return v___x_1205_;
 }
 }
 static lean_object* _init_l_Lean_instToExprPreresolved(void){
 _start:
 {
-lean_object* v___x_1204_; 
-v___x_1204_ = lean_obj_once(&l_Lean_instToExprPreresolved___closed__3, &l_Lean_instToExprPreresolved___closed__3_once, _init_l_Lean_instToExprPreresolved___closed__3);
-return v___x_1204_;
+lean_object* v___x_1206_; 
+v___x_1206_ = lean_obj_once(&l_Lean_instToExprPreresolved___closed__3, &l_Lean_instToExprPreresolved___closed__3_once, _init_l_Lean_instToExprPreresolved___closed__3);
+return v___x_1206_;
 }
 }
 lean_object* runtime_initialize_Lean_ToLevel(uint8_t builtin);

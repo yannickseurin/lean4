@@ -14,42 +14,54 @@
 extern "C" {
 #endif
 lean_object* l_Lean_Level_succ___override(lean_object*);
+lean_object* l_unsafeCast___redArg(lean_object*);
 lean_object* l_Lean_Level_max___override(lean_object*, lean_object*);
 lean_object* l_Lean_Level_imax___override(lean_object*, lean_object*);
+static lean_once_cell_t l_Lean_instToLevel___closed__0_once = LEAN_ONCE_CELL_INITIALIZER;
+static lean_object* l_Lean_instToLevel___closed__0;
 LEAN_EXPORT lean_object* l_Lean_instToLevel;
 LEAN_EXPORT lean_object* l_Lean_instToLevel__1(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_ToLevel_max(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_ToLevel_imax(lean_object*, lean_object*);
+static lean_object* _init_l_Lean_instToLevel___closed__0(void){
+_start:
+{
+lean_object* v___x_1_; lean_object* v___x_2_; 
+v___x_1_ = lean_box(0);
+v___x_2_ = l_unsafeCast___redArg(v___x_1_);
+return v___x_2_;
+}
+}
 static lean_object* _init_l_Lean_instToLevel(void){
 _start:
 {
-lean_object* v___x_1_; 
-v___x_1_ = lean_box(0);
-return v___x_1_;
-}
-}
-LEAN_EXPORT lean_object* l_Lean_instToLevel__1(lean_object* v_inst_2_){
-_start:
-{
 lean_object* v___x_3_; 
-v___x_3_ = l_Lean_Level_succ___override(v_inst_2_);
+v___x_3_ = lean_obj_once(&l_Lean_instToLevel___closed__0, &l_Lean_instToLevel___closed__0_once, _init_l_Lean_instToLevel___closed__0);
 return v___x_3_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_ToLevel_max(lean_object* v_inst_4_, lean_object* v_inst_5_){
+LEAN_EXPORT lean_object* l_Lean_instToLevel__1(lean_object* v_inst_4_){
 _start:
 {
-lean_object* v___x_6_; 
-v___x_6_ = l_Lean_Level_max___override(v_inst_4_, v_inst_5_);
-return v___x_6_;
+lean_object* v___x_5_; 
+v___x_5_ = l_Lean_Level_succ___override(v_inst_4_);
+return v___x_5_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_ToLevel_imax(lean_object* v_inst_7_, lean_object* v_inst_8_){
+LEAN_EXPORT lean_object* l_Lean_ToLevel_max(lean_object* v_inst_6_, lean_object* v_inst_7_){
 _start:
 {
-lean_object* v___x_9_; 
-v___x_9_ = l_Lean_Level_imax___override(v_inst_7_, v_inst_8_);
-return v___x_9_;
+lean_object* v___x_8_; 
+v___x_8_ = l_Lean_Level_max___override(v_inst_6_, v_inst_7_);
+return v___x_8_;
+}
+}
+LEAN_EXPORT lean_object* l_Lean_ToLevel_imax(lean_object* v_inst_9_, lean_object* v_inst_10_){
+_start:
+{
+lean_object* v___x_11_; 
+v___x_11_ = l_Lean_Level_imax___override(v_inst_9_, v_inst_10_);
+return v___x_11_;
 }
 }
 lean_object* runtime_initialize_Lean_Expr(uint8_t builtin);

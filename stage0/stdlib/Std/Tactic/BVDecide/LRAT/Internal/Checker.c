@@ -293,7 +293,6 @@ goto v_reusejp_70_;
 v_reusejp_70_:
 {
 uint8_t v___x_72_; 
-lean_inc_ref(v_ratHints_61_);
 v___x_72_ = l_Std_Tactic_BVDecide_LRAT_Internal_State_checkRat(v_state_41_, v_clause_67_, v___x_71_, v_rupHints_60_, v_ratHints_61_);
 if (v___x_72_ == 0)
 {
@@ -498,6 +497,7 @@ _start:
 {
 uint8_t v_res_137_; lean_object* v_r_138_; 
 v_res_137_ = l_Std_Tactic_BVDecide_LRAT_Internal_check(v_proof_135_, v_formula_136_);
+lean_dec_ref(v_formula_136_);
 lean_dec_ref(v_proof_135_);
 v_r_138_ = lean_box(v_res_137_);
 return v_r_138_;

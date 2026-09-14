@@ -41,6 +41,7 @@ lean_object* l_Lean_Environment_findConstVal_x3f(lean_object*, lean_object*, uin
 lean_object* l_Lean_mkRecName(lean_object*);
 lean_object* l_instMonadExceptOfMonadExceptOf___redArg(lean_object*);
 lean_object* l_Lean_Elab_throwAbortCommand___redArg(lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 lean_object* l_Lean_Environment_getModuleIdxFor_x3f(lean_object*, lean_object*);
 lean_object* l_Lean_mkLevelParam(lean_object*);
 lean_object* l_List_mapTR_loop___redArg(lean_object*, lean_object*, lean_object*);
@@ -3191,7 +3192,7 @@ lean_inc_n(v_toBind_1255_, 2);
 v_toPure_1256_ = lean_ctor_get(v_toApplicative_1253_, 1);
 v_mapConst_1257_ = lean_ctor_get(v_toFunctor_1254_, 1);
 lean_inc(v_mapConst_1257_);
-v___x_1258_ = lean_box(0);
+v___x_1258_ = l_Lean_instInhabitedName;
 lean_inc(v_toPure_1256_);
 lean_inc(v_declName_1252_);
 lean_inc_ref(v_inst_1250_);

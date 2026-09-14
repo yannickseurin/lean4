@@ -50,6 +50,7 @@ lean_object* l_Lean_Expr_bvar___override(lean_object*);
 lean_object* l_Lean_Meta_Sym_Internal_Builder_share1___redArg(lean_object*, lean_object*);
 lean_object* lean_usize_to_nat(size_t);
 lean_object* lean_array_get_borrowed(lean_object*, lean_object*, lean_object*);
+extern lean_object* l_Lean_instInhabitedFVarId_default;
 lean_object* l_Lean_Expr_app___override(lean_object*, lean_object*);
 lean_object* l_Lean_Meta_Sym_Internal_Builder_assertShared(lean_object*, uint8_t, lean_object*, lean_object*);
 lean_object* l_Lean_Expr_lam___override(lean_object*, lean_object*, lean_object*, uint8_t);
@@ -620,7 +621,7 @@ _start:
 lean_object* v___x_124_; lean_object* v___x_125_; lean_object* v___x_126_; lean_object* v___f_127_; lean_object* v___f_128_; lean_object* v___y_130_; lean_object* v___x_231_; 
 v___x_124_ = l_Lean_instInhabitedLocalDecl_default;
 v___x_125_ = l_Lean_Meta_Sym_Internal_instMonadShareCommonAlphaShareBuilderM;
-v___x_126_ = lean_box(0);
+v___x_126_ = l_Lean_instInhabitedFVarId_default;
 v___f_127_ = ((lean_object*)(l___private_Lean_Meta_Sym_AbstractS_0__Lean_Meta_Sym_abstractFVarsCore___closed__0));
 v___f_128_ = ((lean_object*)(l___private_Lean_Meta_Sym_AbstractS_0__Lean_Meta_Sym_abstractFVarsCore___closed__1));
 lean_inc_ref(v_lctx_117_);
@@ -1285,7 +1286,7 @@ LEAN_EXPORT lean_object* l_panic___at___00Lean_Meta_Sym_abstractFVarsRange_spec_
 _start:
 {
 lean_object* v___x_299_; lean_object* v___x_300_; 
-v___x_299_ = lean_box(0);
+v___x_299_ = l_Lean_instInhabitedFVarId_default;
 v___x_300_ = lean_panic_fn_borrowed(v___x_299_, v_msg_298_);
 return v___x_300_;
 }

@@ -1103,6 +1103,7 @@ lean_ctor_set(v___x_352_, 3, v___f_340_);
 lean_ctor_set(v___x_352_, 4, v___f_341_);
 lean_ctor_set_uint8(v___x_352_, sizeof(void*)*5, v___x_351_);
 v___x_353_ = l_Lean_Meta_Simp_main(v_e_331_, v_a_348_, v___x_349_, v___x_352_, v_a_333_, v_a_334_, v_a_335_, v_a_336_);
+lean_dec_ref_known(v___x_352_, 5);
 if (lean_obj_tag(v___x_353_) == 0)
 {
 lean_object* v_a_354_; lean_object* v___x_356_; uint8_t v_isShared_357_; uint8_t v_isSharedCheck_362_; 

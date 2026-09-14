@@ -30,6 +30,7 @@ size_t lean_usize_add(size_t, size_t);
 uint8_t l_Lean_Expr_isAppOfArity(lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_Expr_appArg_x21(lean_object*);
 lean_object* l_Lean_MessageData_ofConstName(lean_object*, uint8_t);
+extern lean_object* l_Lean_instInhabitedName;
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 lean_object* l_Lean_Environment_setExporting(lean_object*, uint8_t);
 uint8_t l_Lean_Environment_contains(lean_object*, lean_object*, uint8_t);
@@ -203,6 +204,15 @@ LEAN_EXPORT uint8_t l_Array_contains___at___00Lean_Compiler_LCNF_isRuntimeBuilti
 LEAN_EXPORT lean_object* l_Array_contains___at___00Lean_Compiler_LCNF_isRuntimeBuiltinType_spec__0___boxed(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_Lean_Compiler_LCNF_isRuntimeBuiltinType(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_isRuntimeBuiltinType___boxed(lean_object*);
+static const lean_string_object l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__0_value = {.m_header = {.m_rc = 0, .m_cs_sz = 0, .m_other = 0, .m_tag = 249}, .m_size = 11, .m_capacity = 11, .m_length = 10, .m_data = "unsafeCast"};
+static const lean_object* l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__0 = (const lean_object*)&l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__0_value;
+static const lean_ctor_object l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__1_value = {.m_header = {.m_rc = 0, .m_cs_sz = sizeof(lean_ctor_object) + sizeof(void*)*2 + 8, .m_other = 2, .m_tag = 1}, .m_objs = {((lean_object*)(((size_t)(0) << 1) | 1)),((lean_object*)&l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__0_value),LEAN_SCALAR_PTR_LITERAL(190, 168, 242, 108, 36, 6, 114, 127)}};
+static const lean_object* l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__1 = (const lean_object*)&l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__1_value;
+static const lean_array_object l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__2_value = {.m_header = {.m_rc = 0, .m_cs_sz = sizeof(lean_array_object) + sizeof(void*)*1, .m_other = 0, .m_tag = 246}, .m_size = 1, .m_capacity = 1, .m_data = {((lean_object*)&l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__1_value)}};
+static const lean_object* l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__2 = (const lean_object*)&l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__2_value;
+LEAN_EXPORT const lean_object* l_Lean_Compiler_LCNF_builtinRuntimeFunctions = (const lean_object*)&l_Lean_Compiler_LCNF_builtinRuntimeFunctions___closed__2_value;
+LEAN_EXPORT uint8_t l_Lean_Compiler_LCNF_isRuntimeBuiltinFunction(lean_object*);
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_isRuntimeBuiltinFunction___boxed(lean_object*);
 LEAN_EXPORT uint8_t l_Lean_Compiler_LCNF_isCompilerRelevantMData___redArg(){
 _start:
 {
@@ -550,7 +560,7 @@ LEAN_EXPORT lean_object* l_Lean_mkUnknownIdentifierMessageCore___at___00Lean_mkU
 _start:
 {
 lean_object* v___x_124_; lean_object* v___x_125_; lean_object* v_env_126_; uint8_t v___x_127_; 
-v___x_124_ = lean_box(0);
+v___x_124_ = l_Lean_instInhabitedName;
 v___x_125_ = lean_st_ref_get(v___y_122_);
 v_env_126_ = lean_ctor_get(v___x_125_, 0);
 lean_inc_ref(v_env_126_);
@@ -650,6 +660,7 @@ lean_object* v___x_151_; lean_object* v___x_152_; lean_object* v_mod_153_; uint8
 v___x_151_ = l_Lean_Environment_header(v_env_126_);
 lean_dec_ref(v_env_126_);
 v___x_152_ = l_Lean_EnvironmentHeader_moduleNames(v___x_151_);
+lean_dec_ref(v___x_151_);
 v_mod_153_ = lean_array_get(v___x_124_, v___x_152_, v_val_147_);
 lean_dec(v_val_147_);
 lean_dec_ref(v___x_152_);
@@ -1374,6 +1385,25 @@ v_res_517_ = l_Lean_Compiler_LCNF_isRuntimeBuiltinType(v_declName_516_);
 lean_dec(v_declName_516_);
 v_r_518_ = lean_box(v_res_517_);
 return v_r_518_;
+}
+}
+LEAN_EXPORT uint8_t l_Lean_Compiler_LCNF_isRuntimeBuiltinFunction(lean_object* v_declName_527_){
+_start:
+{
+lean_object* v___x_528_; uint8_t v___x_529_; 
+v___x_528_ = ((lean_object*)(l_Lean_Compiler_LCNF_builtinRuntimeFunctions));
+v___x_529_ = l_Array_contains___at___00Lean_Compiler_LCNF_isRuntimeBuiltinType_spec__0(v___x_528_, v_declName_527_);
+return v___x_529_;
+}
+}
+LEAN_EXPORT lean_object* l_Lean_Compiler_LCNF_isRuntimeBuiltinFunction___boxed(lean_object* v_declName_530_){
+_start:
+{
+uint8_t v_res_531_; lean_object* v_r_532_; 
+v_res_531_ = l_Lean_Compiler_LCNF_isRuntimeBuiltinFunction(v_declName_530_);
+lean_dec(v_declName_530_);
+v_r_532_ = lean_box(v_res_531_);
+return v_r_532_;
 }
 }
 lean_object* runtime_initialize_Init_Data_FloatArray_Basic(uint8_t builtin);

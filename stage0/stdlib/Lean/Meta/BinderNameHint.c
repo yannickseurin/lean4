@@ -60,6 +60,7 @@ lean_object* lean_nat_div(lean_object*, lean_object*);
 uint8_t lean_nat_dec_le(lean_object*, lean_object*);
 lean_object* lean_array_propagate_mark(lean_object*, lean_object*);
 lean_object* lean_st_ref_put(lean_object*, lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 lean_object* lean_st_ref_get(lean_object*);
 lean_object* l_Lean_Name_mkStr1(lean_object*);
 uint8_t l_Lean_Expr_isAppOfArity(lean_object*, lean_object*, lean_object*);
@@ -251,7 +252,7 @@ LEAN_EXPORT lean_object* l_panic___at___00__private_Lean_Meta_BinderNameHint_0__
 _start:
 {
 lean_object* v___x_24_; lean_object* v___x_25_; lean_object* v___x_26_; lean_object* v___x_27_; 
-v___x_24_ = lean_box(0);
+v___x_24_ = l_Lean_instInhabitedName;
 v___x_25_ = lean_obj_once(&l_panic___at___00__private_Lean_Meta_BinderNameHint_0__Lean_exitScope_spec__0___closed__0, &l_panic___at___00__private_Lean_Meta_BinderNameHint_0__Lean_exitScope_spec__0___closed__0_once, _init_l_panic___at___00__private_Lean_Meta_BinderNameHint_0__Lean_exitScope_spec__0___closed__0);
 v___x_26_ = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(v___x_26_, 0, v___x_24_);
@@ -292,7 +293,7 @@ return v___x_42_;
 else
 {
 lean_object* v___x_43_; lean_object* v___x_44_; lean_object* v___x_45_; lean_object* v___x_46_; lean_object* v___x_47_; lean_object* v___x_48_; 
-v___x_43_ = lean_box(0);
+v___x_43_ = l_Lean_instInhabitedName;
 v___x_44_ = lean_unsigned_to_nat(1u);
 v___x_45_ = lean_nat_sub(v___x_39_, v___x_44_);
 v___x_46_ = lean_array_get(v___x_43_, v_xs_37_, v___x_45_);
@@ -416,7 +417,7 @@ return v___x_103_;
 else
 {
 lean_object* v___x_104_; lean_object* v___x_105_; lean_object* v___x_106_; lean_object* v___x_107_; lean_object* v_name_108_; lean_object* v___x_109_; 
-v___x_104_ = lean_box(0);
+v___x_104_ = l_Lean_instInhabitedName;
 v___x_105_ = lean_nat_sub(v___x_100_, v_bidx_95_);
 v___x_106_ = lean_unsigned_to_nat(1u);
 v___x_107_ = lean_nat_sub(v___x_105_, v___x_106_);
@@ -751,9 +752,9 @@ return v___x_230_;
 LEAN_EXPORT lean_object* l___private_Lean_Meta_BinderNameHint_0__Lean_Expr_resolveBinderNameHint_go___lam__1___boxed(lean_object* v___f_231_, lean_object* v_bidx_232_, lean_object* v_n_233_, lean_object* v_binderType_234_, lean_object* v_body_235_, lean_object* v_binderInfo_236_, lean_object* v___y_237_, lean_object* v___y_238_, lean_object* v___y_239_, lean_object* v___y_240_, lean_object* v___y_241_){
 _start:
 {
-uint8_t v_binderInfo_13568__boxed_242_; lean_object* v_res_243_; 
-v_binderInfo_13568__boxed_242_ = lean_unbox(v_binderInfo_236_);
-v_res_243_ = l___private_Lean_Meta_BinderNameHint_0__Lean_Expr_resolveBinderNameHint_go___lam__1(v___f_231_, v_bidx_232_, v_n_233_, v_binderType_234_, v_body_235_, v_binderInfo_13568__boxed_242_, v___y_237_, v___y_238_, v___y_239_, v___y_240_);
+uint8_t v_binderInfo_13567__boxed_242_; lean_object* v_res_243_; 
+v_binderInfo_13567__boxed_242_ = lean_unbox(v_binderInfo_236_);
+v_res_243_ = l___private_Lean_Meta_BinderNameHint_0__Lean_Expr_resolveBinderNameHint_go___lam__1(v___f_231_, v_bidx_232_, v_n_233_, v_binderType_234_, v_body_235_, v_binderInfo_13567__boxed_242_, v___y_237_, v___y_238_, v___y_239_, v___y_240_);
 lean_dec(v___y_240_);
 lean_dec_ref(v___y_239_);
 lean_dec(v___y_237_);
@@ -1246,7 +1247,7 @@ LEAN_EXPORT lean_object* l___private_Lean_Meta_BinderNameHint_0__Lean_Expr_resol
 _start:
 {
 lean_object* v_a_418_; lean_object* v_fst_419_; lean_object* v___y_425_; lean_object* v___x_428_; lean_object* v___x_429_; lean_object* v___x_430_; 
-v___x_428_ = lean_box(0);
+v___x_428_ = l_Lean_instInhabitedName;
 v___x_429_ = lean_st_ref_get(v_a_412_);
 v___x_430_ = l_Std_DHashMap_Internal_Raw_u2080_Const_get_x3f___at___00__private_Lean_Meta_BinderNameHint_0__Lean_Expr_resolveBinderNameHint_go_spec__1___redArg(v___x_429_, v_e_411_);
 lean_dec(v___x_429_);

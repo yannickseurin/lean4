@@ -477,6 +477,7 @@ v_n_137_ = l_Std_Sat_CNF_numLiterals(v_f_132_);
 v___f_138_ = lean_alloc_closure((void*)(l_Std_Sat_CNF_relabelFin___lam__0___boxed), 2, 1);
 lean_closure_set(v___f_138_, 0, v_n_137_);
 v___x_139_ = l_Std_Sat_CNF_relabel___redArg(v___f_138_, v_f_132_);
+lean_dec_ref(v_f_132_);
 return v___x_139_;
 }
 }

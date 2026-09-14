@@ -738,7 +738,6 @@ lean_object* v_a_178_; lean_object* v___x_180_; uint8_t v_isShared_181_; uint8_t
 lean_dec_ref_known(v_spawnArgs_108_, 5);
 lean_dec_ref(v_args_101_);
 lean_dec_ref(v_handleStderr_98_);
-lean_dec_ref(v_header_97_);
 lean_dec_ref(v_lakePath_95_);
 v_a_178_ = lean_ctor_get(v___x_111_, 0);
 v_isSharedCheck_185_ = !lean_is_exclusive(v___x_111_);
@@ -785,7 +784,6 @@ lean_object* v_a_186_; lean_object* v___x_188_; uint8_t v_isShared_189_; uint8_t
 lean_dec_ref_known(v_spawnArgs_108_, 5);
 lean_dec_ref(v_args_101_);
 lean_dec_ref(v_handleStderr_98_);
-lean_dec_ref(v_header_97_);
 lean_dec_ref(v_lakePath_95_);
 v_a_186_ = lean_ctor_get(v___x_109_, 0);
 v_isSharedCheck_193_ = !lean_is_exclusive(v___x_109_);
@@ -833,6 +831,7 @@ _start:
 {
 lean_object* v_res_209_; 
 v_res_209_ = l_Lean_Server_FileWorker_runLakeSetupFile(v_m_203_, v_lakePath_204_, v_filePath_205_, v_header_206_, v_handleStderr_207_);
+lean_dec_ref(v_header_206_);
 lean_dec_ref(v_m_203_);
 return v_res_209_;
 }
@@ -1099,7 +1098,6 @@ lean_dec(v_a_305_);
 lean_del_object(v___x_302_);
 lean_dec(v_val_300_);
 lean_dec_ref(v_handleStderr_296_);
-lean_dec_ref(v_header_295_);
 v___x_310_ = lean_box(1);
 if (v_isShared_308_ == 0)
 {
@@ -1560,7 +1558,6 @@ lean_object* v_a_417_; lean_object* v___x_419_; uint8_t v_isShared_420_; uint8_t
 lean_del_object(v___x_302_);
 lean_dec(v_val_300_);
 lean_dec_ref(v_handleStderr_296_);
-lean_dec_ref(v_header_295_);
 v_a_417_ = lean_ctor_get(v___x_304_, 0);
 v_isSharedCheck_424_ = !lean_is_exclusive(v___x_304_);
 if (v_isSharedCheck_424_ == 0)
@@ -1606,7 +1603,6 @@ else
 lean_object* v___x_426_; lean_object* v___x_427_; 
 lean_dec(v___x_299_);
 lean_dec_ref(v_handleStderr_296_);
-lean_dec_ref(v_header_295_);
 v___x_426_ = lean_box(1);
 v___x_427_ = lean_alloc_ctor(0, 1, 0);
 lean_ctor_set(v___x_427_, 0, v___x_426_);
@@ -1619,6 +1615,7 @@ _start:
 {
 lean_object* v_res_432_; 
 v_res_432_ = l_Lean_Server_FileWorker_setupFile(v_m_428_, v_header_429_, v_handleStderr_430_);
+lean_dec_ref(v_header_429_);
 lean_dec_ref(v_m_428_);
 return v_res_432_;
 }

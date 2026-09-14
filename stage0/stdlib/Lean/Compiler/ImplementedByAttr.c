@@ -18,6 +18,7 @@ uint8_t l_Lean_Environment_contains(lean_object*, lean_object*, uint8_t);
 lean_object* lean_st_ref_get(lean_object*);
 lean_object* l_Lean_Environment_find_x3f(lean_object*, lean_object*, uint8_t);
 lean_object* l_Lean_MessageData_ofConstName(lean_object*, uint8_t);
+extern lean_object* l_Lean_instInhabitedName;
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 lean_object* l_Lean_Environment_setExporting(lean_object*, uint8_t);
 lean_object* l_Lean_PersistentHashMap_mkEmptyEntriesArray___redArg();
@@ -393,7 +394,7 @@ LEAN_EXPORT lean_object* l_Lean_mkUnknownIdentifierMessageCore___at___00Lean_mkU
 _start:
 {
 lean_object* v___x_45_; lean_object* v___x_46_; lean_object* v_env_47_; uint8_t v___x_48_; 
-v___x_45_ = lean_box(0);
+v___x_45_ = l_Lean_instInhabitedName;
 v___x_46_ = lean_st_ref_get(v___y_43_);
 v_env_47_ = lean_ctor_get(v___x_46_, 0);
 lean_inc_ref(v_env_47_);
@@ -493,6 +494,7 @@ lean_object* v___x_72_; lean_object* v___x_73_; lean_object* v_mod_74_; uint8_t 
 v___x_72_ = l_Lean_Environment_header(v_env_47_);
 lean_dec_ref(v_env_47_);
 v___x_73_ = l_Lean_EnvironmentHeader_moduleNames(v___x_72_);
+lean_dec_ref(v___x_72_);
 v_mod_74_ = lean_array_get(v___x_45_, v___x_73_, v_val_68_);
 lean_dec(v_val_68_);
 lean_dec_ref(v___x_73_);
@@ -2209,9 +2211,9 @@ return v___x_633_;
 LEAN_EXPORT lean_object* l___private_Lean_Compiler_ImplementedByAttr_0__Lean_Compiler_initFn___lam__3_00___x40_Lean_Compiler_ImplementedByAttr_2873759278____hygCtx___hyg_2____boxed(lean_object* v___x_634_, lean_object* v_env_635_, lean_object* v_n_636_, lean_object* v_x_637_){
 _start:
 {
-uint8_t v___x_6738__boxed_638_; uint8_t v_res_639_; lean_object* v_r_640_; 
-v___x_6738__boxed_638_ = lean_unbox(v___x_634_);
-v_res_639_ = l___private_Lean_Compiler_ImplementedByAttr_0__Lean_Compiler_initFn___lam__3_00___x40_Lean_Compiler_ImplementedByAttr_2873759278____hygCtx___hyg_2_(v___x_6738__boxed_638_, v_env_635_, v_n_636_, v_x_637_);
+uint8_t v___x_6737__boxed_638_; uint8_t v_res_639_; lean_object* v_r_640_; 
+v___x_6737__boxed_638_ = lean_unbox(v___x_634_);
+v_res_639_ = l___private_Lean_Compiler_ImplementedByAttr_0__Lean_Compiler_initFn___lam__3_00___x40_Lean_Compiler_ImplementedByAttr_2873759278____hygCtx___hyg_2_(v___x_6737__boxed_638_, v_env_635_, v_n_636_, v_x_637_);
 lean_dec(v_x_637_);
 v_r_640_ = lean_box(v_res_639_);
 return v_r_640_;
@@ -2423,7 +2425,7 @@ LEAN_EXPORT lean_object* l_Lean_Compiler_getImplementedBy_x3f(lean_object* v_env
 _start:
 {
 lean_object* v___x_823_; lean_object* v___x_824_; lean_object* v___x_825_; 
-v___x_823_ = lean_box(0);
+v___x_823_ = l_Lean_instInhabitedName;
 v___x_824_ = l_Lean_Compiler_implementedByAttr;
 v___x_825_ = l_Lean_ParametricAttribute_getParam_x3f___redArg(v___x_823_, v___x_824_, v_env_821_, v_declName_822_);
 return v___x_825_;

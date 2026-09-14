@@ -6302,6 +6302,7 @@ v_resetjp_1693_:
 uint8_t v___x_1696_; lean_object* v___x_1697_; lean_object* v_fst_1698_; lean_object* v_snd_1699_; lean_object* v___x_1701_; uint8_t v_isShared_1702_; uint8_t v_isSharedCheck_1710_; 
 v___x_1696_ = 1;
 v___x_1697_ = l_Lean_sortExprs(v_snd_1689_, v___x_1696_);
+lean_dec(v_snd_1689_);
 v_fst_1698_ = lean_ctor_get(v___x_1697_, 0);
 v_snd_1699_ = lean_ctor_get(v___x_1697_, 1);
 v_isSharedCheck_1710_ = !lean_is_exclusive(v___x_1697_);
@@ -6475,6 +6476,7 @@ uint8_t v___x_1744_; lean_object* v___x_1745_; lean_object* v_fst_1746_; lean_ob
 lean_del_object(v___x_1735_);
 v___x_1744_ = 1;
 v___x_1745_ = l_Lean_sortExprs(v_snd_1733_, v___x_1744_);
+lean_dec(v_snd_1733_);
 v_fst_1746_ = lean_ctor_get(v___x_1745_, 0);
 v_snd_1747_ = lean_ctor_get(v___x_1745_, 1);
 v_isSharedCheck_1761_ = !lean_is_exclusive(v___x_1745_);

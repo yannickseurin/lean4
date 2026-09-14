@@ -22,6 +22,7 @@ lean_object* l_Lean_Expr_appArg_x21(lean_object*);
 lean_object* lean_mk_empty_array_with_capacity(lean_object*);
 lean_object* lean_array_push(lean_object*, lean_object*);
 lean_object* l_Lean_mkAppN(lean_object*, lean_object*);
+extern lean_object* l_Lean_instInhabitedLevel;
 lean_object* l_Lean_Expr_appFn_x21(lean_object*);
 lean_object* l_Lean_Expr_constLevels_x21(lean_object*);
 lean_object* l_List_head_x21___redArg(lean_object*, lean_object*);
@@ -613,7 +614,7 @@ else
 {
 lean_object* v___x_202_; lean_object* v___x_203_; lean_object* v___x_204_; lean_object* v_00_u03b1_205_; lean_object* v_a_206_; lean_object* v___x_207_; lean_object* v___x_208_; lean_object* v_u_209_; lean_object* v___x_210_; lean_object* v___x_211_; lean_object* v___x_212_; lean_object* v___x_213_; lean_object* v___x_214_; lean_object* v___x_215_; lean_object* v_proof_216_; lean_object* v___x_217_; lean_object* v___x_218_; lean_object* v___x_219_; lean_object* v___x_220_; lean_object* v___x_221_; 
 lean_dec_ref(v_mkNeProof_169_);
-v___x_202_ = lean_box(0);
+v___x_202_ = l_Lean_instInhabitedLevel;
 v___x_203_ = l_Lean_Expr_appFn_x21(v_e_167_);
 v___x_204_ = l_Lean_Expr_appFn_x21(v___x_203_);
 v_00_u03b1_205_ = l_Lean_Expr_appArg_x21(v___x_204_);
@@ -684,7 +685,7 @@ if (v_ne_244_ == 0)
 {
 lean_object* v___x_255_; lean_object* v___x_256_; lean_object* v___x_257_; lean_object* v_00_u03b1_258_; lean_object* v_a_259_; lean_object* v___x_260_; lean_object* v___x_261_; lean_object* v_u_262_; lean_object* v___x_263_; lean_object* v___x_264_; lean_object* v___x_265_; lean_object* v___x_266_; lean_object* v_eqProp_267_; lean_object* v___x_268_; lean_object* v___x_269_; lean_object* v_rflExpr_270_; lean_object* v___x_271_; lean_object* v___x_272_; lean_object* v___x_273_; lean_object* v_proof_274_; lean_object* v___x_275_; lean_object* v___x_276_; lean_object* v___x_277_; lean_object* v___x_278_; lean_object* v___x_279_; 
 lean_dec_ref(v_mkNeProof_245_);
-v___x_255_ = lean_box(0);
+v___x_255_ = l_Lean_instInhabitedLevel;
 v___x_256_ = l_Lean_Expr_appFn_x21(v_e_243_);
 v___x_257_ = l_Lean_Expr_appFn_x21(v___x_256_);
 v_00_u03b1_258_ = l_Lean_Expr_appArg_x21(v___x_257_);

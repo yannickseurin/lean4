@@ -107,6 +107,7 @@ lean_dec(v_a_25_);
 lean_dec_ref(v_a_24_);
 lean_dec(v_a_23_);
 lean_dec_ref(v_a_22_);
+lean_dec_ref(v_hypotheses_20_);
 return v_res_29_;
 }
 }
@@ -217,6 +218,7 @@ v_hypotheses_77_ = lean_ctor_get(v___x_76_, 3);
 lean_inc_ref(v_hypotheses_77_);
 lean_dec(v___x_76_);
 v___x_78_ = l___private_Lean_Meta_Tactic_BVDecide_Main_0__Lean_Meta_Tactic_BVDecide_bvUnsat(v___x_75_, v_hypotheses_77_, v_ctx_48_, v_a_52_, v_a_53_, v_a_54_, v_a_55_, v_a_56_, v_a_57_);
+lean_dec_ref(v_hypotheses_77_);
 if (lean_obj_tag(v___x_78_) == 0)
 {
 lean_object* v_a_79_; 

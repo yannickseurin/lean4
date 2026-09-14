@@ -3951,11 +3951,12 @@ v___jp_1152_:
 {
 lean_object* v___x_1154_; lean_object* v___x_1155_; uint8_t v___x_1156_; 
 v___x_1154_ = l_Array_zipIdx___redArg(v_fieldsAndSeps_1151_, v___x_1149_);
+lean_dec_ref(v_fieldsAndSeps_1151_);
 v___x_1155_ = lean_array_get_size(v___x_1154_);
 v___x_1156_ = lean_nat_dec_lt(v___x_1149_, v___x_1155_);
 if (v___x_1156_ == 0)
 {
-lean_dec_ref(v___x_1154_);
+lean_dec(v___x_1154_);
 v___y_1136_ = v___x_1156_;
 goto v___jp_1135_;
 }
@@ -3963,7 +3964,7 @@ else
 {
 if (v___x_1156_ == 0)
 {
-lean_dec_ref(v___x_1154_);
+lean_dec(v___x_1154_);
 v___y_1136_ = v___x_1156_;
 goto v___jp_1135_;
 }
@@ -3973,7 +3974,7 @@ size_t v___x_1157_; size_t v___x_1158_; uint8_t v___x_1159_;
 v___x_1157_ = ((size_t)0ULL);
 v___x_1158_ = lean_usize_of_nat(v___x_1155_);
 v___x_1159_ = l___private_Init_Data_Array_Basic_0__Array_anyMUnsafe_any___at___00__private_Lean_Server_Completion_SyntheticCompletion_0__Lean_Server_Completion_isSyntheticStructFieldCompletion_spec__0(v___y_1153_, v_hoverPos_1132_, v___x_1154_, v___x_1157_, v___x_1158_);
-lean_dec_ref(v___x_1154_);
+lean_dec(v___x_1154_);
 if (v___x_1159_ == 0)
 {
 v___y_1136_ = v___x_1159_;

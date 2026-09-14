@@ -1059,7 +1059,6 @@ uint8_t v___x_439_; uint8_t v___x_440_; lean_object* v___x_441_;
 v___x_439_ = 1;
 v___x_440_ = 1;
 v___x_441_ = l_Lean_Meta_mkLetFVars(v_insts_413_, v_val_435_, v___x_439_, v___x_439_, v___x_440_, v_a_416_, v_a_417_, v___x_432_, v_a_419_);
-lean_dec_ref(v_insts_413_);
 if (lean_obj_tag(v___x_441_) == 0)
 {
 lean_object* v_a_442_; uint8_t v___x_443_; lean_object* v___x_444_; 
@@ -1069,7 +1068,6 @@ lean_dec_ref_known(v___x_441_, 1);
 v___x_443_ = 0;
 v___x_444_ = l_Lean_Meta_mkLambdaFVars(v_xs_412_, v_a_442_, v___x_443_, v___x_439_, v___x_443_, v___x_439_, v___x_440_, v_a_416_, v_a_417_, v___x_432_, v_a_419_);
 lean_dec_ref_known(v___x_432_, 3);
-lean_dec_ref(v_xs_412_);
 if (lean_obj_tag(v___x_444_) == 0)
 {
 lean_object* v_a_445_; lean_object* v___x_447_; uint8_t v_isShared_448_; uint8_t v_isSharedCheck_455_; 
@@ -1699,7 +1697,6 @@ lean_dec(v_a_636_);
 v___x_644_ = 1;
 v___x_645_ = 1;
 v___x_646_ = l_Lean_Meta_mkForallFVars(v_xs_624_, v_type_625_, v___x_633_, v___x_644_, v___x_644_, v___x_645_, v___y_628_, v___y_629_, v___y_630_, v___y_631_);
-lean_dec_ref(v_xs_624_);
 if (lean_obj_tag(v___x_646_) == 0)
 {
 lean_object* v_a_647_; lean_object* v___x_648_; lean_object* v___x_649_; lean_object* v___x_650_; lean_object* v___x_651_; lean_object* v___x_652_; lean_object* v___x_653_; lean_object* v___x_654_; lean_object* v___x_655_; lean_object* v___x_656_; lean_object* v___x_657_; lean_object* v___x_658_; lean_object* v___x_659_; lean_object* v___x_660_; lean_object* v___x_661_; lean_object* v___x_662_; lean_object* v___x_663_; lean_object* v___x_664_; lean_object* v___x_665_; 

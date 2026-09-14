@@ -23,6 +23,7 @@ extern lean_object* l_Lean_instInhabitedExpr;
 lean_object* lean_panic_fn_borrowed(lean_object*, lean_object*);
 lean_object* l_Lean_Expr_app___override(lean_object*, lean_object*);
 lean_object* l_Lean_mkApp3(lean_object*, lean_object*, lean_object*, lean_object*);
+extern lean_object* l_Lean_instInhabitedName;
 lean_object* l_Lean_Name_mkStr4(lean_object*, lean_object*, lean_object*, lean_object*);
 extern lean_object* l_Lean_eagerReflBoolTrue;
 lean_object* l_Lean_mkApp6(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -3607,7 +3608,7 @@ LEAN_EXPORT lean_object* l_panic___at___00__private_Lean_Meta_Tactic_Grind_Order
 _start:
 {
 lean_object* v___x_1368_; lean_object* v___x_1369_; 
-v___x_1368_ = lean_box(0);
+v___x_1368_ = l_Lean_instInhabitedName;
 v___x_1369_ = lean_panic_fn_borrowed(v___x_1368_, v_msg_1367_);
 return v___x_1369_;
 }

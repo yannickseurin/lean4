@@ -29,6 +29,7 @@ _start:
 {
 uint8_t v_res_6_; lean_object* v_r_7_; 
 v_res_6_ = l_Std_Tactic_BVDecide_LRAT_check(v_lratProof_4_, v_cnf_5_);
+lean_dec_ref(v_cnf_5_);
 lean_dec_ref(v_lratProof_4_);
 v_r_7_ = lean_box(v_res_6_);
 return v_r_7_;

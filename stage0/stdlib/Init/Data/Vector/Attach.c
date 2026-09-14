@@ -13,6 +13,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+lean_object* l_unsafeCast___redArg(lean_object*);
 lean_object* l_Id_instMonad___lam__5___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Id_instMonad___lam__1___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Id_instMonad___lam__6(lean_object*, lean_object*, lean_object*, lean_object*);
@@ -30,6 +31,7 @@ size_t lean_usize_add(size_t, size_t);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(lean_object*, size_t, size_t, lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_pmap___redArg(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_Vector_pmap___redArg___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_pmap(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_pmap___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0(lean_object*, lean_object*, lean_object*, size_t, size_t, lean_object*);
@@ -64,9 +66,11 @@ static const lean_object* l_Vector_pmapImpl___redArg___closed__8 = (const lean_o
 static const lean_ctor_object l_Vector_pmapImpl___redArg___closed__9_value = {.m_header = {.m_rc = 0, .m_cs_sz = sizeof(lean_ctor_object) + sizeof(void*)*2 + 0, .m_other = 2, .m_tag = 0}, .m_objs = {((lean_object*)&l_Vector_pmapImpl___redArg___closed__8_value),((lean_object*)&l_Vector_pmapImpl___redArg___closed__6_value)}};
 static const lean_object* l_Vector_pmapImpl___redArg___closed__9 = (const lean_object*)&l_Vector_pmapImpl___redArg___closed__9_value;
 LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_pmapImpl(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_pmapImpl___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_unattach___redArg(lean_object*);
+LEAN_EXPORT lean_object* l_Vector_unattach___redArg___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Vector_unattach(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_unattach___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(lean_object* v_f_1_, size_t v_sz_2_, size_t v_i_3_, lean_object* v_bs_4_){
@@ -76,219 +80,278 @@ uint8_t v___x_5_;
 v___x_5_ = lean_usize_dec_lt(v_i_3_, v_sz_2_);
 if (v___x_5_ == 0)
 {
+lean_object* v___x_6_; 
 lean_dec(v_f_1_);
-return v_bs_4_;
+v___x_6_ = l_unsafeCast___redArg(v_bs_4_);
+lean_dec_ref(v_bs_4_);
+return v___x_6_;
 }
 else
 {
-lean_object* v_v_6_; lean_object* v___x_7_; lean_object* v_bs_x27_8_; lean_object* v___x_9_; size_t v___x_10_; size_t v___x_11_; lean_object* v___x_12_; 
-v_v_6_ = lean_array_uget(v_bs_4_, v_i_3_);
-v___x_7_ = lean_unsigned_to_nat(0u);
-v_bs_x27_8_ = lean_array_uset(v_bs_4_, v_i_3_, v___x_7_);
+lean_object* v_v_7_; lean_object* v___x_8_; lean_object* v_bs_x27_9_; lean_object* v_val_10_; lean_object* v___x_11_; size_t v___x_12_; size_t v___x_13_; lean_object* v___x_14_; lean_object* v___x_15_; 
+v_v_7_ = lean_array_uget(v_bs_4_, v_i_3_);
+v___x_8_ = lean_unsigned_to_nat(0u);
+v_bs_x27_9_ = lean_array_uset(v_bs_4_, v_i_3_, v___x_8_);
+v_val_10_ = l_unsafeCast___redArg(v_v_7_);
+lean_dec(v_v_7_);
 lean_inc(v_f_1_);
-v___x_9_ = lean_apply_2(v_f_1_, v_v_6_, lean_box(0));
-v___x_10_ = ((size_t)1ULL);
-v___x_11_ = lean_usize_add(v_i_3_, v___x_10_);
-v___x_12_ = lean_array_uset(v_bs_x27_8_, v_i_3_, v___x_9_);
-v_i_3_ = v___x_11_;
-v_bs_4_ = v___x_12_;
+v___x_11_ = lean_apply_2(v_f_1_, v_val_10_, lean_box(0));
+v___x_12_ = ((size_t)1ULL);
+v___x_13_ = lean_usize_add(v_i_3_, v___x_12_);
+v___x_14_ = l_unsafeCast___redArg(v___x_11_);
+lean_dec(v___x_11_);
+v___x_15_ = lean_array_uset(v_bs_x27_9_, v_i_3_, v___x_14_);
+v_i_3_ = v___x_13_;
+v_bs_4_ = v___x_15_;
 goto _start;
 }
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg___boxed(lean_object* v_f_14_, lean_object* v_sz_15_, lean_object* v_i_16_, lean_object* v_bs_17_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg___boxed(lean_object* v_f_17_, lean_object* v_sz_18_, lean_object* v_i_19_, lean_object* v_bs_20_){
 _start:
 {
-size_t v_sz_boxed_18_; size_t v_i_boxed_19_; lean_object* v_res_20_; 
-v_sz_boxed_18_ = lean_unbox_usize(v_sz_15_);
-lean_dec(v_sz_15_);
-v_i_boxed_19_ = lean_unbox_usize(v_i_16_);
-lean_dec(v_i_16_);
-v_res_20_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(v_f_14_, v_sz_boxed_18_, v_i_boxed_19_, v_bs_17_);
-return v_res_20_;
+size_t v_sz_boxed_21_; size_t v_i_boxed_22_; lean_object* v_res_23_; 
+v_sz_boxed_21_ = lean_unbox_usize(v_sz_18_);
+lean_dec(v_sz_18_);
+v_i_boxed_22_ = lean_unbox_usize(v_i_19_);
+lean_dec(v_i_19_);
+v_res_23_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(v_f_17_, v_sz_boxed_21_, v_i_boxed_22_, v_bs_20_);
+return v_res_23_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_pmap___redArg(lean_object* v_f_21_, lean_object* v_xs_22_){
+LEAN_EXPORT lean_object* l_Vector_pmap___redArg(lean_object* v_f_24_, lean_object* v_xs_25_){
 _start:
 {
-size_t v_sz_23_; size_t v___x_24_; lean_object* v___x_25_; 
-v_sz_23_ = lean_array_size(v_xs_22_);
-v___x_24_ = ((size_t)0ULL);
-v___x_25_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(v_f_21_, v_sz_23_, v___x_24_, v_xs_22_);
-return v___x_25_;
+lean_object* v___x_26_; size_t v_sz_27_; size_t v___x_28_; lean_object* v___x_29_; lean_object* v___x_30_; lean_object* v___x_31_; 
+v___x_26_ = l_unsafeCast___redArg(v_xs_25_);
+v_sz_27_ = lean_array_size(v___x_26_);
+v___x_28_ = ((size_t)0ULL);
+v___x_29_ = l_unsafeCast___redArg(v___x_26_);
+lean_dec(v___x_26_);
+v___x_30_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(v_f_24_, v_sz_27_, v___x_28_, v___x_29_);
+v___x_31_ = l_unsafeCast___redArg(v___x_30_);
+lean_dec_ref(v___x_30_);
+return v___x_31_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_pmap(lean_object* v_00_u03b1_26_, lean_object* v_00_u03b2_27_, lean_object* v_n_28_, lean_object* v_P_29_, lean_object* v_f_30_, lean_object* v_xs_31_, lean_object* v_H_32_){
+LEAN_EXPORT lean_object* l_Vector_pmap___redArg___boxed(lean_object* v_f_32_, lean_object* v_xs_33_){
 _start:
 {
-lean_object* v___x_33_; 
-v___x_33_ = l_Vector_pmap___redArg(v_f_30_, v_xs_31_);
-return v___x_33_;
+lean_object* v_res_34_; 
+v_res_34_ = l_Vector_pmap___redArg(v_f_32_, v_xs_33_);
+lean_dec_ref(v_xs_33_);
+return v_res_34_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_pmap___boxed(lean_object* v_00_u03b1_34_, lean_object* v_00_u03b2_35_, lean_object* v_n_36_, lean_object* v_P_37_, lean_object* v_f_38_, lean_object* v_xs_39_, lean_object* v_H_40_){
+LEAN_EXPORT lean_object* l_Vector_pmap(lean_object* v_00_u03b1_35_, lean_object* v_00_u03b2_36_, lean_object* v_n_37_, lean_object* v_P_38_, lean_object* v_f_39_, lean_object* v_xs_40_, lean_object* v_H_41_){
 _start:
 {
-lean_object* v_res_41_; 
-v_res_41_ = l_Vector_pmap(v_00_u03b1_34_, v_00_u03b2_35_, v_n_36_, v_P_37_, v_f_38_, v_xs_39_, v_H_40_);
-lean_dec(v_n_36_);
-return v_res_41_;
+lean_object* v___x_42_; 
+v___x_42_ = l_Vector_pmap___redArg(v_f_39_, v_xs_40_);
+return v___x_42_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0(lean_object* v_00_u03b1_42_, lean_object* v_00_u03b2_43_, lean_object* v_f_44_, size_t v_sz_45_, size_t v_i_46_, lean_object* v_bs_47_){
+LEAN_EXPORT lean_object* l_Vector_pmap___boxed(lean_object* v_00_u03b1_43_, lean_object* v_00_u03b2_44_, lean_object* v_n_45_, lean_object* v_P_46_, lean_object* v_f_47_, lean_object* v_xs_48_, lean_object* v_H_49_){
 _start:
 {
-lean_object* v___x_48_; 
-v___x_48_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(v_f_44_, v_sz_45_, v_i_46_, v_bs_47_);
-return v___x_48_;
+lean_object* v_res_50_; 
+v_res_50_ = l_Vector_pmap(v_00_u03b1_43_, v_00_u03b2_44_, v_n_45_, v_P_46_, v_f_47_, v_xs_48_, v_H_49_);
+lean_dec_ref(v_xs_48_);
+lean_dec(v_n_45_);
+return v_res_50_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___boxed(lean_object* v_00_u03b1_49_, lean_object* v_00_u03b2_50_, lean_object* v_f_51_, lean_object* v_sz_52_, lean_object* v_i_53_, lean_object* v_bs_54_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0(lean_object* v_00_u03b1_51_, lean_object* v_00_u03b2_52_, lean_object* v_f_53_, size_t v_sz_54_, size_t v_i_55_, lean_object* v_bs_56_){
 _start:
 {
-size_t v_sz_boxed_55_; size_t v_i_boxed_56_; lean_object* v_res_57_; 
-v_sz_boxed_55_ = lean_unbox_usize(v_sz_52_);
-lean_dec(v_sz_52_);
-v_i_boxed_56_ = lean_unbox_usize(v_i_53_);
-lean_dec(v_i_53_);
-v_res_57_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0(v_00_u03b1_49_, v_00_u03b2_50_, v_f_51_, v_sz_boxed_55_, v_i_boxed_56_, v_bs_54_);
-return v_res_57_;
+lean_object* v___x_57_; 
+v___x_57_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___redArg(v_f_53_, v_sz_54_, v_i_55_, v_bs_56_);
+return v___x_57_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___redArg(lean_object* v_xs_58_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0___boxed(lean_object* v_00_u03b1_58_, lean_object* v_00_u03b2_59_, lean_object* v_f_60_, lean_object* v_sz_61_, lean_object* v_i_62_, lean_object* v_bs_63_){
 _start:
 {
-lean_inc_ref(v_xs_58_);
-return v_xs_58_;
+size_t v_sz_boxed_64_; size_t v_i_boxed_65_; lean_object* v_res_66_; 
+v_sz_boxed_64_ = lean_unbox_usize(v_sz_61_);
+lean_dec(v_sz_61_);
+v_i_boxed_65_ = lean_unbox_usize(v_i_62_);
+lean_dec(v_i_62_);
+v_res_66_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Vector_pmap_spec__0(v_00_u03b1_58_, v_00_u03b2_59_, v_f_60_, v_sz_boxed_64_, v_i_boxed_65_, v_bs_63_);
+return v_res_66_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___redArg___boxed(lean_object* v_xs_59_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___redArg(lean_object* v_xs_67_){
 _start:
 {
-lean_object* v_res_60_; 
-v_res_60_ = l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___redArg(v_xs_59_);
-lean_dec_ref(v_xs_59_);
-return v_res_60_;
+lean_object* v___x_68_; 
+v___x_68_ = l_unsafeCast___redArg(v_xs_67_);
+return v___x_68_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl(lean_object* v_00_u03b1_61_, lean_object* v_n_62_, lean_object* v_xs_63_, lean_object* v_P_64_, lean_object* v_x_65_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___redArg___boxed(lean_object* v_xs_69_){
 _start:
 {
-lean_inc_ref(v_xs_63_);
-return v_xs_63_;
+lean_object* v_res_70_; 
+v_res_70_ = l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___redArg(v_xs_69_);
+lean_dec_ref(v_xs_69_);
+return v_res_70_;
 }
 }
-LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___boxed(lean_object* v_00_u03b1_66_, lean_object* v_n_67_, lean_object* v_xs_68_, lean_object* v_P_69_, lean_object* v_x_70_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl(lean_object* v_00_u03b1_71_, lean_object* v_n_72_, lean_object* v_xs_73_, lean_object* v_P_74_, lean_object* v_x_75_){
 _start:
 {
-lean_object* v_res_71_; 
-v_res_71_ = l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl(v_00_u03b1_66_, v_n_67_, v_xs_68_, v_P_69_, v_x_70_);
-lean_dec_ref(v_xs_68_);
-lean_dec(v_n_67_);
-return v_res_71_;
+lean_object* v___x_76_; 
+v___x_76_ = l_unsafeCast___redArg(v_xs_73_);
+return v___x_76_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_attach___redArg(lean_object* v_xs_72_){
+LEAN_EXPORT lean_object* l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl___boxed(lean_object* v_00_u03b1_77_, lean_object* v_n_78_, lean_object* v_xs_79_, lean_object* v_P_80_, lean_object* v_x_81_){
 _start:
 {
-lean_inc_ref(v_xs_72_);
-return v_xs_72_;
+lean_object* v_res_82_; 
+v_res_82_ = l___private_Init_Data_Vector_Attach_0__Vector_attachWithImpl(v_00_u03b1_77_, v_n_78_, v_xs_79_, v_P_80_, v_x_81_);
+lean_dec_ref(v_xs_79_);
+lean_dec(v_n_78_);
+return v_res_82_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_attach___redArg___boxed(lean_object* v_xs_73_){
-_start:
-{
-lean_object* v_res_74_; 
-v_res_74_ = l_Vector_attach___redArg(v_xs_73_);
-lean_dec_ref(v_xs_73_);
-return v_res_74_;
-}
-}
-LEAN_EXPORT lean_object* l_Vector_attach(lean_object* v_00_u03b1_75_, lean_object* v_n_76_, lean_object* v_xs_77_){
-_start:
-{
-lean_inc_ref(v_xs_77_);
-return v_xs_77_;
-}
-}
-LEAN_EXPORT lean_object* l_Vector_attach___boxed(lean_object* v_00_u03b1_78_, lean_object* v_n_79_, lean_object* v_xs_80_){
-_start:
-{
-lean_object* v_res_81_; 
-v_res_81_ = l_Vector_attach(v_00_u03b1_78_, v_n_79_, v_xs_80_);
-lean_dec_ref(v_xs_80_);
-lean_dec(v_n_79_);
-return v_res_81_;
-}
-}
-LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg___lam__0(lean_object* v_f_82_, lean_object* v_x_83_){
+LEAN_EXPORT lean_object* l_Vector_attach___redArg(lean_object* v_xs_83_){
 _start:
 {
 lean_object* v___x_84_; 
-v___x_84_ = lean_apply_2(v_f_82_, v_x_83_, lean_box(0));
+v___x_84_ = l_unsafeCast___redArg(v_xs_83_);
 return v___x_84_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg(lean_object* v_f_104_, lean_object* v_xs_105_){
+LEAN_EXPORT lean_object* l_Vector_attach___redArg___boxed(lean_object* v_xs_85_){
 _start:
 {
-lean_object* v___f_106_; lean_object* v___x_107_; size_t v_sz_108_; size_t v___x_109_; lean_object* v___x_110_; 
-v___f_106_ = lean_alloc_closure((void*)(l_Vector_pmapImpl___redArg___lam__0), 2, 1);
-lean_closure_set(v___f_106_, 0, v_f_104_);
-v___x_107_ = ((lean_object*)(l_Vector_pmapImpl___redArg___closed__9));
-v_sz_108_ = lean_array_size(v_xs_105_);
-v___x_109_ = ((size_t)0ULL);
-v___x_110_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map(lean_box(0), lean_box(0), lean_box(0), v___x_107_, v___f_106_, v_sz_108_, v___x_109_, v_xs_105_);
-return v___x_110_;
+lean_object* v_res_86_; 
+v_res_86_ = l_Vector_attach___redArg(v_xs_85_);
+lean_dec_ref(v_xs_85_);
+return v_res_86_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_pmapImpl(lean_object* v_00_u03b1_111_, lean_object* v_00_u03b2_112_, lean_object* v_n_113_, lean_object* v_P_114_, lean_object* v_f_115_, lean_object* v_xs_116_, lean_object* v_H_117_){
+LEAN_EXPORT lean_object* l_Vector_attach(lean_object* v_00_u03b1_87_, lean_object* v_n_88_, lean_object* v_xs_89_){
 _start:
 {
-lean_object* v___f_118_; lean_object* v___x_119_; size_t v_sz_120_; size_t v___x_121_; lean_object* v___x_122_; 
-v___f_118_ = lean_alloc_closure((void*)(l_Vector_pmapImpl___redArg___lam__0), 2, 1);
-lean_closure_set(v___f_118_, 0, v_f_115_);
-v___x_119_ = ((lean_object*)(l_Vector_pmapImpl___redArg___closed__9));
-v_sz_120_ = lean_array_size(v_xs_116_);
-v___x_121_ = ((size_t)0ULL);
-v___x_122_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map(lean_box(0), lean_box(0), lean_box(0), v___x_119_, v___f_118_, v_sz_120_, v___x_121_, v_xs_116_);
-return v___x_122_;
+lean_object* v___x_90_; 
+v___x_90_ = l_unsafeCast___redArg(v_xs_89_);
+return v___x_90_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_pmapImpl___boxed(lean_object* v_00_u03b1_123_, lean_object* v_00_u03b2_124_, lean_object* v_n_125_, lean_object* v_P_126_, lean_object* v_f_127_, lean_object* v_xs_128_, lean_object* v_H_129_){
+LEAN_EXPORT lean_object* l_Vector_attach___boxed(lean_object* v_00_u03b1_91_, lean_object* v_n_92_, lean_object* v_xs_93_){
 _start:
 {
-lean_object* v_res_130_; 
-v_res_130_ = l_Vector_pmapImpl(v_00_u03b1_123_, v_00_u03b2_124_, v_n_125_, v_P_126_, v_f_127_, v_xs_128_, v_H_129_);
-lean_dec(v_n_125_);
-return v_res_130_;
+lean_object* v_res_94_; 
+v_res_94_ = l_Vector_attach(v_00_u03b1_91_, v_n_92_, v_xs_93_);
+lean_dec_ref(v_xs_93_);
+lean_dec(v_n_92_);
+return v_res_94_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_unattach___redArg(lean_object* v_xs_131_){
+LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg___lam__0(lean_object* v_f_95_, lean_object* v_x_96_){
 _start:
 {
-size_t v_sz_132_; size_t v___x_133_; lean_object* v___x_134_; 
-v_sz_132_ = lean_array_size(v_xs_131_);
-v___x_133_ = ((size_t)0ULL);
-v___x_134_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Array_unattach_spec__0___redArg(v_sz_132_, v___x_133_, v_xs_131_);
-return v___x_134_;
+lean_object* v___x_97_; 
+v___x_97_ = lean_apply_2(v_f_95_, v_x_96_, lean_box(0));
+return v___x_97_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_unattach(lean_object* v_n_135_, lean_object* v_00_u03b1_136_, lean_object* v_p_137_, lean_object* v_xs_138_){
+LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg(lean_object* v_f_117_, lean_object* v_xs_118_){
 _start:
 {
-lean_object* v___x_139_; 
-v___x_139_ = l_Vector_unattach___redArg(v_xs_138_);
-return v___x_139_;
+lean_object* v___f_119_; lean_object* v___x_120_; lean_object* v___x_121_; size_t v_sz_122_; size_t v___x_123_; lean_object* v___x_124_; lean_object* v___x_125_; lean_object* v___x_126_; 
+v___f_119_ = lean_alloc_closure((void*)(l_Vector_pmapImpl___redArg___lam__0), 2, 1);
+lean_closure_set(v___f_119_, 0, v_f_117_);
+v___x_120_ = l_unsafeCast___redArg(v_xs_118_);
+v___x_121_ = ((lean_object*)(l_Vector_pmapImpl___redArg___closed__9));
+v_sz_122_ = lean_array_size(v___x_120_);
+v___x_123_ = ((size_t)0ULL);
+v___x_124_ = l_unsafeCast___redArg(v___x_120_);
+lean_dec(v___x_120_);
+v___x_125_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map(lean_box(0), lean_box(0), lean_box(0), v___x_121_, v___f_119_, v_sz_122_, v___x_123_, v___x_124_);
+v___x_126_ = l_unsafeCast___redArg(v___x_125_);
+lean_dec(v___x_125_);
+return v___x_126_;
 }
 }
-LEAN_EXPORT lean_object* l_Vector_unattach___boxed(lean_object* v_n_140_, lean_object* v_00_u03b1_141_, lean_object* v_p_142_, lean_object* v_xs_143_){
+LEAN_EXPORT lean_object* l_Vector_pmapImpl___redArg___boxed(lean_object* v_f_127_, lean_object* v_xs_128_){
 _start:
 {
-lean_object* v_res_144_; 
-v_res_144_ = l_Vector_unattach(v_n_140_, v_00_u03b1_141_, v_p_142_, v_xs_143_);
-lean_dec(v_n_140_);
-return v_res_144_;
+lean_object* v_res_129_; 
+v_res_129_ = l_Vector_pmapImpl___redArg(v_f_127_, v_xs_128_);
+lean_dec_ref(v_xs_128_);
+return v_res_129_;
+}
+}
+LEAN_EXPORT lean_object* l_Vector_pmapImpl(lean_object* v_00_u03b1_130_, lean_object* v_00_u03b2_131_, lean_object* v_n_132_, lean_object* v_P_133_, lean_object* v_f_134_, lean_object* v_xs_135_, lean_object* v_H_136_){
+_start:
+{
+lean_object* v___f_137_; lean_object* v___x_138_; lean_object* v___x_139_; size_t v_sz_140_; size_t v___x_141_; lean_object* v___x_142_; lean_object* v___x_143_; lean_object* v___x_144_; 
+v___f_137_ = lean_alloc_closure((void*)(l_Vector_pmapImpl___redArg___lam__0), 2, 1);
+lean_closure_set(v___f_137_, 0, v_f_134_);
+v___x_138_ = l_unsafeCast___redArg(v_xs_135_);
+v___x_139_ = ((lean_object*)(l_Vector_pmapImpl___redArg___closed__9));
+v_sz_140_ = lean_array_size(v___x_138_);
+v___x_141_ = ((size_t)0ULL);
+v___x_142_ = l_unsafeCast___redArg(v___x_138_);
+lean_dec(v___x_138_);
+v___x_143_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map(lean_box(0), lean_box(0), lean_box(0), v___x_139_, v___f_137_, v_sz_140_, v___x_141_, v___x_142_);
+v___x_144_ = l_unsafeCast___redArg(v___x_143_);
+lean_dec(v___x_143_);
+return v___x_144_;
+}
+}
+LEAN_EXPORT lean_object* l_Vector_pmapImpl___boxed(lean_object* v_00_u03b1_145_, lean_object* v_00_u03b2_146_, lean_object* v_n_147_, lean_object* v_P_148_, lean_object* v_f_149_, lean_object* v_xs_150_, lean_object* v_H_151_){
+_start:
+{
+lean_object* v_res_152_; 
+v_res_152_ = l_Vector_pmapImpl(v_00_u03b1_145_, v_00_u03b2_146_, v_n_147_, v_P_148_, v_f_149_, v_xs_150_, v_H_151_);
+lean_dec_ref(v_xs_150_);
+lean_dec(v_n_147_);
+return v_res_152_;
+}
+}
+LEAN_EXPORT lean_object* l_Vector_unattach___redArg(lean_object* v_xs_153_){
+_start:
+{
+size_t v_sz_154_; size_t v___x_155_; lean_object* v___x_156_; lean_object* v___x_157_; lean_object* v___x_158_; 
+v_sz_154_ = lean_array_size(v_xs_153_);
+v___x_155_ = ((size_t)0ULL);
+v___x_156_ = l_unsafeCast___redArg(v_xs_153_);
+v___x_157_ = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___00Array_unattach_spec__0___redArg(v_sz_154_, v___x_155_, v___x_156_);
+v___x_158_ = l_unsafeCast___redArg(v___x_157_);
+lean_dec_ref(v___x_157_);
+return v___x_158_;
+}
+}
+LEAN_EXPORT lean_object* l_Vector_unattach___redArg___boxed(lean_object* v_xs_159_){
+_start:
+{
+lean_object* v_res_160_; 
+v_res_160_ = l_Vector_unattach___redArg(v_xs_159_);
+lean_dec_ref(v_xs_159_);
+return v_res_160_;
+}
+}
+LEAN_EXPORT lean_object* l_Vector_unattach(lean_object* v_n_161_, lean_object* v_00_u03b1_162_, lean_object* v_p_163_, lean_object* v_xs_164_){
+_start:
+{
+lean_object* v___x_165_; 
+v___x_165_ = l_Vector_unattach___redArg(v_xs_164_);
+return v___x_165_;
+}
+}
+LEAN_EXPORT lean_object* l_Vector_unattach___boxed(lean_object* v_n_166_, lean_object* v_00_u03b1_167_, lean_object* v_p_168_, lean_object* v_xs_169_){
+_start:
+{
+lean_object* v_res_170_; 
+v_res_170_ = l_Vector_unattach(v_n_166_, v_00_u03b1_167_, v_p_168_, v_xs_169_);
+lean_dec_ref(v_xs_169_);
+lean_dec(v_n_166_);
+return v_res_170_;
 }
 }
 lean_object* runtime_initialize_Init_Data_Vector_Lemmas(uint8_t builtin);

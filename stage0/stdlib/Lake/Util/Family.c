@@ -507,6 +507,7 @@ lean_inc(v_idx_161_);
 v___x_286_ = lean_array_push(v___x_285_, v_idx_161_);
 lean_inc(v_fam_159_);
 v___x_287_ = l_Lean_Syntax_mkApp(v_fam_159_, v___x_286_);
+lean_dec_ref(v___x_286_);
 v___x_288_ = ((lean_object*)(l_Lake___aux__Lake__Util__Family______macroRules__Lake__familyDef__1___closed__36));
 v___x_289_ = l_Lean_Name_append(v___x_288_, v_fst_280_);
 v___x_290_ = l_Lean_TSyntax_getId(v_id_157_);

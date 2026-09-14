@@ -22,6 +22,7 @@ lean_object* lean_nat_sub(lean_object*, lean_object*);
 lean_object* l_Lean_Name_mkStr4(lean_object*, lean_object*, lean_object*, lean_object*);
 uint8_t l_Lean_Expr_isConstOf(lean_object*, lean_object*);
 uint8_t lean_nat_dec_le(lean_object*, lean_object*);
+lean_object* l_unsafeCast___redArg(lean_object*);
 lean_object* l_Lean_Expr_sort___override(lean_object*);
 lean_object* l_Lean_Expr_getAppNumArgs(lean_object*);
 lean_object* lean_mk_array(lean_object*, lean_object*);
@@ -60,6 +61,8 @@ static const lean_object* l_Lean_Expr_withAppAux___at___00Lean_Elab_Tactic_VCGen
 LEAN_EXPORT lean_object* l_Lean_Expr_withAppAux___at___00Lean_Elab_Tactic_VCGen_isWPApp_x3f_spec__0(lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_once_cell_t l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0_once = LEAN_ONCE_CELL_INITIALIZER;
 static lean_object* l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0;
+static lean_once_cell_t l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__1_once = LEAN_ONCE_CELL_INITIALIZER;
+static lean_object* l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__1;
 LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_VCGen_isWPApp_x3f(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_VCGen_WPApp_Prog(lean_object* v_info_1_){
 _start:
@@ -336,26 +339,35 @@ return v___x_86_;
 static lean_object* _init_l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0(void){
 _start:
 {
-lean_object* v___x_98_; lean_object* v_dummy_99_; 
+lean_object* v___x_98_; lean_object* v___x_99_; 
 v___x_98_ = lean_box(0);
-v_dummy_99_ = l_Lean_Expr_sort___override(v___x_98_);
-return v_dummy_99_;
+v___x_99_ = l_unsafeCast___redArg(v___x_98_);
+return v___x_99_;
 }
 }
-LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_VCGen_isWPApp_x3f(lean_object* v_rhs_100_){
+static lean_object* _init_l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__1(void){
 _start:
 {
-lean_object* v_dummy_101_; lean_object* v_nargs_102_; lean_object* v___x_103_; lean_object* v___x_104_; lean_object* v___x_105_; lean_object* v___x_106_; 
-v_dummy_101_ = lean_obj_once(&l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0, &l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0_once, _init_l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0);
-v_nargs_102_ = l_Lean_Expr_getAppNumArgs(v_rhs_100_);
-lean_inc(v_nargs_102_);
-v___x_103_ = lean_mk_array(v_nargs_102_, v_dummy_101_);
-v___x_104_ = lean_unsigned_to_nat(1u);
-v___x_105_ = lean_nat_sub(v_nargs_102_, v___x_104_);
-lean_dec(v_nargs_102_);
-lean_inc_ref(v_rhs_100_);
-v___x_106_ = l_Lean_Expr_withAppAux___at___00Lean_Elab_Tactic_VCGen_isWPApp_x3f_spec__0(v_rhs_100_, v_rhs_100_, v___x_103_, v___x_105_);
-return v___x_106_;
+lean_object* v___x_100_; lean_object* v_dummy_101_; 
+v___x_100_ = lean_obj_once(&l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0, &l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0_once, _init_l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__0);
+v_dummy_101_ = l_Lean_Expr_sort___override(v___x_100_);
+return v_dummy_101_;
+}
+}
+LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_VCGen_isWPApp_x3f(lean_object* v_rhs_102_){
+_start:
+{
+lean_object* v_dummy_103_; lean_object* v_nargs_104_; lean_object* v___x_105_; lean_object* v___x_106_; lean_object* v___x_107_; lean_object* v___x_108_; 
+v_dummy_103_ = lean_obj_once(&l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__1, &l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__1_once, _init_l_Lean_Elab_Tactic_VCGen_isWPApp_x3f___closed__1);
+v_nargs_104_ = l_Lean_Expr_getAppNumArgs(v_rhs_102_);
+lean_inc(v_nargs_104_);
+v___x_105_ = lean_mk_array(v_nargs_104_, v_dummy_103_);
+v___x_106_ = lean_unsigned_to_nat(1u);
+v___x_107_ = lean_nat_sub(v_nargs_104_, v___x_106_);
+lean_dec(v_nargs_104_);
+lean_inc_ref(v_rhs_102_);
+v___x_108_ = l_Lean_Expr_withAppAux___at___00Lean_Elab_Tactic_VCGen_isWPApp_x3f_spec__0(v_rhs_102_, v_rhs_102_, v___x_105_, v___x_107_);
+return v___x_108_;
 }
 }
 lean_object* runtime_initialize_Lean_Meta_Sym_SymM(uint8_t builtin);
